@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Havenco — Premium home goods delivered across the UAE in 3–7 days. Secure checkout. Free returns on defective items."/>
+  <title>Havenco · UAE Home Goods</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─────────────────────────────────────
+       TOKENS
+    ───────────────────────────────────── */
+    :root {
+      --ivory:     #FAF7F2;
+      --ivory-2:   #F2EDE4;
+      --ivory-3:   #E8E0D5;
+      --parch:     #EDE8DF;
+      --gold:      #B8964E;
+      --gold-lt:   #D4AE6A;
+      --gold-dk:   #947838;
+      --charcoal:  #1C1A18;
+      --ink:       #2C2825;
+      --ink-2:     #4A453F;
+      --mist:      #8C857C;
+      --mist-lt:   #B8B0A6;
+      --rule:      rgba(184,150,78,.22);
+      --rule-lt:   rgba(184,150,78,.10);
+      --shadow-sm: 0 2px 16px rgba(28,26,24,.06);
+      --shadow-md: 0 8px 40px rgba(28,26,24,.10);
+      --shadow-lg: 0 20px 60px rgba(28,26,24,.13);
+
+      --f-display: 'Cormorant Garant', Georgia, serif;
+      --f-body:    'Jost', sans-serif;
+
+      --ease:     cubic-bezier(.22,.68,0,1.2);
+      --ease-out: cubic-bezier(.16,1,.3,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: var(--f-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─────────────────────────────────────
+       ANIMATIONS
+    ───────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(24px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity:0; } to { opacity:1; }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; } 50% { opacity:.5; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
+    }
+    .reveal.in { opacity:1; transform:translateY(0); }
+    .d1 { transition-delay:.08s; }
+    .d2 { transition-delay:.16s; }
+    .d3 { transition-delay:.24s; }
+    .d4 { transition-delay:.32s; }
+
+    /* ─────────────────────────────────────
+       ANNOUNCEMENT STRIP
+    ───────────────────────────────────── */
+    .strip {
+      background: var(--charcoal);
+      padding: 9px 0;
+      overflow: hidden;
+    }
+    .strip-track {
+      display: inline-block;
+      white-space: nowrap;
+      animation: ticker 38s linear infinite;
+    }
+    .strip-track span {
+      font-family: var(--f-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin: 0 52px;
+    }
+    .strip-track span::before { content: '✦  '; }
+
+    /* ─────────────────────────────────────
+       NAV
+    ───────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(250,247,242,.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--rule-lt);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 6%;
+      gap: 40px;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-right: auto;
+    }
+    .nav-logo-word {
+      font-family: var(--f-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: .06em;
+      line-height: 1;
+    }
+    .nav-logo-sub {
+      font-family: var(--f-body);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-checkout {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--charcoal);
+      color: var(--ivory) !important;
+      font-size: 10px !important;
+      font-weight: 600 !important;
+      letter-spacing: .16em !important;
+      padding: 9px 20px;
+      border-radius: 2px;
+      transition: background .2s !important;
+    }
+    .nav-checkout:hover { background: var(--ink-2) !important; color: var(--ivory) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      margin-left: auto;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--charcoal);
+      transition: transform .25s;
+    }
+
+    .mob-nav {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0; right: 0;
+      background: var(--ivory);
+      border-bottom: 1px solid var(--rule-lt);
+      padding: 24px 6%;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 199;
+    }
+    .mob-nav.open { display: flex; }
+    .mob-nav a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule-lt);
+    }
+
+    /* ─────────────────────────────────────
+       HERO
+    ───────────────────────────────────── */
+    .hero {
+      min-height: calc(100svh - 64px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 80px 6% 80px;
+      overflow: hidden;
+    }
+
+    /* warm grain texture */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 75% 50%, rgba(184,150,78,.07) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(184,150,78,.05) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    /* decorative vertical rule */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      right: 42%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--rule), var(--rule), transparent);
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 1;
+      max-width: 580px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--f-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      animation: fadeUp .7s var(--ease-out) both;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-h1 {
+      font-family: var(--f-display);
+      font-weight: 300;
+      font-size: clamp(44px, 7vw, 80px);
+      line-height: 1.05;
+      color: var(--charcoal);
+      letter-spacing: -.01em;
+      margin-bottom: 28px;
+      animation: fadeUp .7s .08s var(--ease-out) both;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold-dk);
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--ink-2);
+      max-width: 420px;
+      line-height: 1.8;
+      margin-bottom: 44px;
+      animation: fadeUp .7s .16s var(--ease-out) both;
+    }
+
+    .hero-btns {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp .7s .22s var(--ease-out) both;
+    }
+
+    /* ─────────────────────────────────────
+       BUTTONS (global)
+    ───────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--charcoal);
+      color: var(--ivory);
+      font-family: var(--f-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 2px;
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+    .btn-primary:hover {
+      background: var(--ink-2);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--ivory);
+      font-family: var(--f-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 2px;
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-dk);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(184,150,78,.3);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--f-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 15px 28px;
+      border-radius: 2px;
+      border: 1px solid var(--rule);
+      transition: border-color .2s, color .2s;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-dk);
+    }
+
+    /* ─────────────────────────────────────
+       WISE BADGE
+    ───────────────────────────────────── */
+    .wise-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--ivory-2);
+      border: 1px solid var(--rule-lt);
+      border-radius: 4px;
+      padding: 8px 14px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--mist);
+      letter-spacing: .04em;
+    }
+    .wise-badge .lock-icon {
+      width: 12px;
+      height: 12px;
+      color: var(--gold);
+    }
+    .wise-badge strong {
+      color: var(--ink-2);
+      font-weight: 600;
+    }
+    .wise-badge .payment-icons {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 4px;
+    }
+    .pay-chip {
+      background: var(--charcoal);
+      color: var(--ivory);
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      padding: 2px 6px;
+      border-radius: 2px;
+      line-height: 1.4;
+    }
+    .pay-chip.apple { background: #1C1A18; }
+    .pay-chip.visa  { background: #1A1F71; }
+    .pay-chip.mc    { background: #EB001B; }
+
+    /* hero decorative image panel */
+    .hero-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn .9s .4s both;
+    }
+    .hero-panel-inner {
+      width: 85%;
+      height: 70%;
+      background:
+        linear-gradient(135deg, var(--parch) 0%, var(--ivory-2) 100%);
+      border-radius: 3px;
+      border: 1px solid var(--rule-lt);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-panel-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(184,150,78,.08), transparent);
+    }
+    .hero-product-icon {
+      font-size: 72px;
+      filter: drop-shadow(0 8px 24px rgba(28,26,24,.12));
+      position: relative;
+    }
+    .hero-product-label {
+      font-family: var(--f-display);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink-2);
+      letter-spacing: .06em;
+      position: relative;
+    }
+    .hero-product-sub {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mist);
+      position: relative;
+    }
+
+    /* floating stat cards */
+    .stat-card {
+      position: absolute;
+      background: white;
+      border-radius: 6px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow-md);
+      font-family: var(--f-body);
+    }
+    .stat-card.s1 { bottom: 14%; left: -8%; }
+    .stat-card.s2 { top: 14%; right: -5%; }
+    .stat-num {
+      font-family: var(--f-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-top: 3px;
+    }
+
+    /* ─────────────────────────────────────
+       SECTION SCAFFOLDING
+    ───────────────────────────────────── */
+    section { padding: 100px 6%; }
+
+    .sec-kicker {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sec-kicker::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .sec-h2 {
+      font-family: var(--f-display);
+      font-weight: 400;
+      font-size: clamp(32px, 4.5vw, 52px);
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+    .sec-h2 em { font-style: italic; color: var(--gold-dk); }
+
+    .sec-sub {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink-2);
+      max-width: 480px;
+      line-height: 1.8;
+    }
+
+    /* section divider rule */
+    .rule {
+      border: none;
+      border-top: 1px solid var(--rule-lt);
+      margin: 0 6%;
+    }
+
+    /* ─────────────────────────────────────
+       PRODUCT GRID
+    ───────────────────────────────────── */
+    #products {
+      background: var(--ivory);
+    }
+
+    .products-header {
+      max-width: 640px;
+      margin-bottom: 64px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .prod-card {
+      background: white;
+      border-radius: 4px;
+      border: 1px solid var(--rule-lt);
+      overflow: hidden;
+      transition: box-shadow .3s, transform .3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .prod-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .prod-image {
+      background: var(--parch);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule-lt);
+    }
+    .prod-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 80% at 50% 40%, rgba(184,150,78,.07), transparent);
+    }
+
+    .prod-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: var(--charcoal);
+      color: var(--ivory);
+      padding: 4px 10px;
+      border-radius: 2px;
+      z-index: 1;
+    }
+    .prod-badge.gold { background: var(--gold); }
+
+    .prod-body {
+      padding: 24px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .prod-cat {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 6px;
+    }
+
+    .prod-name {
+      font-family: var(--f-display);
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--charcoal);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .prod-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .prod-footer {
+      border-top: 1px solid var(--rule-lt);
+      padding-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .prod-price {
+      font-family: var(--f-display);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+    .prod-price-note {
+      font-size: 11px;
+      color: var(--mist);
+      margin-top: 1px;
+      font-weight: 300;
+    }
+
+    /* product checkout button */
+    .prod-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--charcoal);
+      color: var(--ivory);
+      font-family: var(--f-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 11px 18px;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: background .2s, box-shadow .2s;
+    }
+    .prod-cta:hover {
+      background: var(--ink-2);
+      box-shadow: var(--shadow-sm);
+    }
+    .prod-cta svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+    /* wise badge under product */
+    .prod-wise {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--mist-lt);
+      letter-spacing: .02em;
+    }
+    .prod-wise svg { width: 12px; height: 12px; color: var(--gold); }
+
+    /* ─────────────────────────────────────
+       TRUST STRIP
+    ───────────────────────────────────── */
+    .trust-strip {
+      background: var(--ivory-2);
+      border-top: 1px solid var(--rule-lt);
+      border-bottom: 1px solid var(--rule-lt);
+      padding: 0 6%;
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      divide-x: 1px solid var(--rule-lt);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 32px 24px;
+      border-right: 1px solid var(--rule-lt);
+    }
+    .trust-item:last-child { border-right: none; }
+
+    .trust-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      background: white;
+    }
+
+    .trust-title {
+      font-family: var(--f-display);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+    .trust-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--mist);
+      line-height: 1.5;
+    }
+
+    /* ─────────────────────────────────────
+       PAYMENT / WISE SECTION
+    ───────────────────────────────────── */
+    #payment {
+      background: var(--charcoal);
+      color: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+    #payment::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184,150,78,.08), transparent),
+        radial-gradient(ellipse 40% 40% at 10% 20%, rgba(184,150,78,.05), transparent);
+    }
+    #payment .sec-h2 { color: var(--ivory); }
+    #payment .sec-sub { color: var(--mist-lt); max-width: 520px; }
+    #payment .sec-kicker { color: var(--gold-lt); }
+    #payment .sec-kicker::after { background: var(--gold-dk); }
+
+    .payment-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .payment-card {
+      background: rgba(250,247,242,.06);
+      border: 1px solid rgba(184,150,78,.2);
+      border-radius: 6px;
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .payment-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .payment-card-title {
+      font-family: var(--f-display);
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 6px;
+    }
+    .payment-card-sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--mist-lt);
+      margin-bottom: 32px;
+    }
+
+    .payment-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .pay-method {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(250,247,242,.05);
+      border: 1px solid rgba(250,247,242,.08);
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ivory);
+      transition: border-color .2s;
+    }
+    .pay-method:hover { border-color: rgba(184,150,78,.4); }
+    .pay-method-icon { font-size: 20px; }
+    .pay-method-note { font-size: 11px; color: var(--mist-lt); margin-left: auto; }
+
+    .payment-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .payment-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--ivory);
+      font-family: var(--f-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      padding: 18px 32px;
+      border-radius: 2px;
+      transition: background .2s, transform .15s;
+    }
+    .payment-btn:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .payment-btn svg { width: 14px; height: 14px; }
+
+    .payment-secure-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--mist-lt);
+      letter-spacing: .04em;
+    }
+    .payment-secure-note svg { width: 12px; height: 12px; color: var(--gold); }
+
+    /* wise logo text */
+    .wise-wordmark {
+      font-family: var(--f-body);
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+    .wise-wordmark .dot { color: var(--gold); }
+
+    .payment-features {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .pf-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .pf-num {
+      font-family: var(--f-display);
+      font-size: 36px;
+      font-weight: 300;
+      color: rgba(184,150,78,.3);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 36px;
+    }
+    .pf-title {
+      font-family: var(--f-display);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 4px;
+    }
+    .pf-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--mist-lt);
+      line-height: 1.65;
+    }
+
+    /* ─────────────────────────────────────
+       HOW IT WORKS
+    ───────────────────────────────────── */
+    #how { background: var(--ivory-2); }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 60px;
+    }
+
+    .how-step {
+      background: white;
+      padding: 40px 32px;
+      position: relative;
+      border: 1px solid var(--rule-lt);
+      transition: box-shadow .3s;
+    }
+    .how-step:hover { box-shadow: var(--shadow-md); }
+
+    .how-step-num {
+      font-family: var(--f-display);
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .how-step-icon { font-size: 26px; margin-bottom: 14px; }
+
+    .how-step-title {
+      font-family: var(--f-display);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .how-step-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--ink-2);
+      line-height: 1.65;
+    }
+
+    /* ─────────────────────────────────────
+       FEATURED (hero product spotlight)
+    ───────────────────────────────────── */
+    #featured {
+      background: var(--ivory);
+      padding: 100px 6%;
+    }
+
+    .featured-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .featured-image {
+      background: var(--parch);
+      border-radius: 4px;
+      border: 1px solid var(--rule-lt);
+      height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .featured-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(184,150,78,.08), transparent);
+    }
+
+    .feat-detail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--ink-2);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--rule-lt);
+    }
+    .feat-detail:first-child { border-top: 1px solid var(--rule-lt); }
+    .feat-detail-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mist);
+      min-width: 100px;
+    }
+
+    /* ─────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      color: var(--ivory-3);
+      padding: 64px 6% 40px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(250,247,242,.08);
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      font-family: var(--f-display);
+      font-size: 24px;
+      font-weight: 500;
+      color: white;
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+    .footer-brand-tag {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .footer-brand-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(232,224,213,.5);
+      line-height: 1.7;
+      max-width: 260px;
+    }
+
+    .footer-col-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--mist-lt);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(232,224,213,.55);
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--gold-lt); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(232,224,213,.35);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-legal a {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(232,224,213,.35);
+      transition: color .2s;
+    }
+    .footer-legal a:hover { color: var(--gold-lt); }
+
+    /* ─────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-panel { display: none; }
+      .hero::after { display: none; }
+      .payment-layout { grid-template-columns: 1fr; gap: 48px; }
+      .featured-inner { grid-template-columns: 1fr; }
+      .featured-image { height: 320px; font-size: 80px; }
+      .how-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      nav { padding: 0 5%; }
+      section { padding: 72px 5%; }
+      .products-grid { grid-template-columns: 1fr; }
+      .trust-items { grid-template-columns: repeat(2, 1fr); }
+      .trust-item { border-right: none; border-bottom: 1px solid var(--rule-lt); }
+      .trust-item:last-child { border-bottom: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .hero-h1 { font-size: clamp(38px, 11vw, 58px); }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .trust-items { grid-template-columns: 1fr; }
+      .prod-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .prod-cta { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     ANNOUNCEMENT STRIP
+════════════════════════════════ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>Free exchange on defective items</span>
+    <span>UAE-stocked · 3–7 day delivery</span>
+    <span>Secure checkout · Apple Pay &amp; Card</span>
+    <span>Powered by Wise — global payment security</span>
+    <span>Premium home goods · Curated for UAE living</span>
+    <span>Free exchange on defective items</span>
+    <span>UAE-stocked · 3–7 day delivery</span>
+    <span>Secure checkout · Apple Pay &amp; Card</span>
+    <span>Powered by Wise — global payment security</span>
+    <span>Premium home goods · Curated for UAE living</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     NAV
+════════════════════════════════ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-word">Havenco</span>
+    <span class="nav-logo-sub">UAE Home Goods</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#products">Shop</a></li>
+    <li><a href="#featured">Featured</a></li>
+    <li><a href="#how">Delivery</a></li>
+    <li><a href="#payment">Checkout</a></li>
+    <li>
+      <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="nav-checkout">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Secure Checkout
+      </a>
+    </li>
+  </ul>
+
+  <button class="hamburger" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#products" onclick="closeMob()">Shop</a>
+  <a href="#featured" onclick="closeMob()">Featured</a>
+  <a href="#how" onclick="closeMob()">Delivery</a>
+  <a href="#payment" onclick="closeMob()">Checkout</a>
+  <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" style="color:var(--gold)">🔒 Secure Checkout</a>
+</div>
+
+<!-- ════════════════════════════════
+     HERO
+════════════════════════════════ -->
+<section class="hero" id="home">
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">Premium Home Goods · UAE</div>
+
+    <h1 class="hero-h1">
+      Curated for<br>
+      <em>how you live</em><br>
+      in the UAE.
+    </h1>
+
+    <p class="hero-sub">
+      Trending home décor, wellness essentials, and bedroom pieces — sourced from UAE-regional stock, delivered to your door in 3 to 7 days. No waiting. No compromise.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">
+        Browse Products
+      </a>
+      <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="btn-gold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Secure Checkout (Apple Pay / Card)
+      </a>
+    </div>
+
+    <div style="margin-top: 24px; animation: fadeUp .7s .32s var(--ease-out) both;">
+      <div class="wise-badge">
+        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Secure payments powered by&nbsp;<strong>Wise</strong>
+        <div class="payment-icons">
+          <span class="pay-chip apple">⌘ Pay</span>
+          <span class="pay-chip visa">VISA</span>
+          <span class="pay-chip mc">MC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- decorative right panel -->
+  <div class="hero-panel">
+    <div class="hero-panel-inner">
+      <div class="hero-product-icon">🌧️</div>
+      <div class="hero-product-label">Rain Cloud Diffuser</div>
+      <div class="hero-product-sub">Bestseller · AED 195</div>
+
+      <div class="stat-card s1">
+        <div class="stat-num">3–7</div>
+        <div class="stat-label">Day UAE Delivery</div>
+      </div>
+      <div class="stat-card s2">
+        <div class="stat-num">🔒</div>
+        <div class="stat-label">Wise Secured</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════
+     TRUST STRIP
+════════════════════════════════ -->
+<div class="trust-strip">
+  <div class="trust-items">
+    <div class="trust-item">
+      <div class="trust-icon">🚚</div>
+      <div>
+        <div class="trust-title">3–7 Day Delivery</div>
+        <div class="trust-desc">UAE-regional stock only</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🔒</div>
+      <div>
+        <div class="trust-title">Secure Checkout</div>
+        <div class="trust-desc">Powered by Wise</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✦</div>
+      <div>
+        <div class="trust-title">Premium Quality</div>
+        <div class="trust-desc">Curated, not mass-listed</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">↩</div>
+      <div>
+        <div class="trust-title">Free Exchange</div>
+        <div class="trust-desc">On all defective items</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule"/>
+
+<!-- ════════════════════════════════
+     FEATURED PRODUCT
+════════════════════════════════ -->
+<section id="featured">
+  <div class="featured-inner">
+
+    <div class="featured-image reveal">
+      🌧️
+    </div>
+
+    <div class="reveal d1">
+      <div class="sec-kicker">Featured Product</div>
+      <h2 class="sec-h2">Rain Cloud<br><em>Aroma Diffuser</em></h2>
+      <p class="sec-sub" style="margin-bottom:32px">
+        Soothing rainfall sounds, 7-colour LED ambient light, ultrasonic mist with essential oil support. The piece UAE bedrooms are missing — and the one everyone who visits asks about.
+      </p>
+
+      <div style="margin-bottom: 32px;">
+        <div class="feat-detail">
+          <span class="feat-detail-label">Function</span>
+          Humidifier · Aroma diffuser · Night light · Rain sound generator
+        </div>
+        <div class="feat-detail">
+          <span class="feat-detail-label">Capacity</span>
+          450ml water tank · Up to 10 hours continuous
+        </div>
+        <div class="feat-detail">
+          <span class="feat-detail-label">Light</span>
+          7 LED colours · Cycle or fixed · Independent on/off
+        </div>
+        <div class="feat-detail">
+          <span class="feat-detail-label">Power</span>
+          Type-C · 5V 2A · UAE-compatible adapter included
+        </div>
+        <div class="feat-detail">
+          <span class="feat-detail-label">Delivery</span>
+          UAE-regional stock · 3–7 business days to your door
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+        <div>
+          <div style="font-family:var(--f-display);font-size:36px;font-weight:500;color:var(--charcoal);">AED 195</div>
+          <div style="font-size:12px;color:var(--mist);font-weight:300;">Free delivery across UAE</div>
+        </div>
+        <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="btn-gold" style="flex:1;justify-content:center;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure Checkout (Apple Pay / Card)
+        </a>
+      </div>
+
+      <div class="wise-badge" style="width:100%;justify-content:center;">
+        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Secure payments powered by&nbsp;<strong>Wise</strong>&nbsp;·
+        <div class="payment-icons">
+          <span class="pay-chip apple">⌘ Pay</span>
+          <span class="pay-chip visa">VISA</span>
+          <span class="pay-chip mc">MC</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rule"/>
+
+<!-- ════════════════════════════════
+     PRODUCT GRID
+════════════════════════════════ -->
+<section id="products">
+  <div class="products-header reveal">
+    <div class="sec-kicker">The Collection</div>
+    <h2 class="sec-h2">Every piece,<br><em>chosen carefully.</em></h2>
+    <p class="sec-sub">We do not list hundreds of items. Every product in the Havenco collection is selected for UAE living — the light, the space, the air.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Product 1 -->
+    <div class="prod-card reveal">
+      <div class="prod-image">
+        🌧️
+        <span class="prod-badge gold">Bestseller</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">Wellness · Bedroom</div>
+        <div class="prod-name">Rain Cloud Aroma Diffuser</div>
+        <p class="prod-desc">Ultrasonic mist, real rainfall sounds, 7-colour LED, 450ml tank. The piece that transforms a bedroom from a place you sleep into a place you rest.</p>
+        <div class="prod-footer">
+          <div>
+            <div class="prod-price">AED 195</div>
+            <div class="prod-price-note">Free UAE delivery</div>
+          </div>
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="prod-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </a>
+        </div>
+        <div class="prod-wise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Apple Pay · Card · Powered by Wise
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="prod-card reveal d1">
+      <div class="prod-image">
+        💪
+        <span class="prod-badge">New In</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">Fitness · Home Gym</div>
+        <div class="prod-name">Resistance Band Set (5-Level)</div>
+        <p class="prod-desc">Latex-free, anti-snap, five resistance levels from light to heavy. Replaces every machine your building gym never has free. Carry bag included.</p>
+        <div class="prod-footer">
+          <div>
+            <div class="prod-price">AED 65</div>
+            <div class="prod-price-note">Free UAE delivery</div>
+          </div>
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="prod-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </a>
+        </div>
+        <div class="prod-wise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Apple Pay · Card · Powered by Wise
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="prod-card reveal d2">
+      <div class="prod-image">
+        💆
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">Wellness · Desk</div>
+        <div class="prod-name">Posture Corrector (Adjustable)</div>
+        <p class="prod-desc">For desk workers. Gently realigns the shoulders and upper back over 20–30 minutes daily. Fits under any clothing. Adjustable for all frame sizes.</p>
+        <div class="prod-footer">
+          <div>
+            <div class="prod-price">AED 75</div>
+            <div class="prod-price-note">Free UAE delivery</div>
+          </div>
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="prod-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </a>
+        </div>
+        <div class="prod-wise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Apple Pay · Card · Powered by Wise
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="prod-card reveal">
+      <div class="prod-image">
+        💎
+        <span class="prod-badge">Gift Favourite</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">Beauty · Bedroom</div>
+        <div class="prod-name">Silk Pillowcase (Standard)</div>
+        <p class="prod-desc">22-momme mulberry silk. Reduces hair breakage, preserves moisture, and regulates temperature — notably in AC-heavy UAE bedrooms. A gift that looks expensive, because it is.</p>
+        <div class="prod-footer">
+          <div>
+            <div class="prod-price">AED 79</div>
+            <div class="prod-price-note">Free UAE delivery</div>
+          </div>
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="prod-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </a>
+        </div>
+        <div class="prod-wise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Apple Pay · Card · Powered by Wise
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="prod-card reveal d1">
+      <div class="prod-image">
+        🌿
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">Home · Kitchen</div>
+        <div class="prod-name">Bamboo Kitchen Organiser (3-Tier)</div>
+        <p class="prod-desc">Expands small counters dramatically. Three tiers, natural bamboo finish, tool-free assembly. UAE flat kitchens are not designed for storage — this fixes that.</p>
+        <div class="prod-footer">
+          <div>
+            <div class="prod-price">AED 89</div>
+            <div class="prod-price-note">Free UAE delivery</div>
+          </div>
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="prod-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </a>
+        </div>
+        <div class="prod-wise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Apple Pay · Card · Powered by Wise
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="prod-card reveal d2">
+      <div class="prod-image">
+        💡
+        <span class="prod-badge">Trending</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">Lighting · Desk</div>
+        <div class="prod-name">LED Ring Light (Phone Clip)</div>
+        <p class="prod-desc">Three lighting modes, stepless brightness, universal clip mount. For content creators, video calls, or anyone tired of looking grey under office LEDs.</p>
+        <div class="prod-footer">
+          <div>
+            <div class="prod-price">AED 55</div>
+            <div class="prod-price-note">Free UAE delivery</div>
+          </div>
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="prod-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </a>
+        </div>
+        <div class="prod-wise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Apple Pay · Card · Powered by Wise
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rule"/>
+
+<!-- ════════════════════════════════
+     PAYMENT / WISE SECTION
+════════════════════════════════ -->
+<section id="payment">
+  <div class="payment-layout">
+
+    <div class="reveal">
+      <div class="sec-kicker">Secure Checkout</div>
+      <h2 class="sec-h2">Pay your way.<br><em>Secured by Wise.</em></h2>
+      <p class="sec-sub" style="margin-bottom:48px;">Every Havenco transaction is processed through Wise — one of the world's most trusted international payment platforms, used by millions globally. Your card details are never stored by us.</p>
+
+      <div class="payment-features">
+        <div class="pf-item">
+          <div class="pf-num">01</div>
+          <div>
+            <div class="pf-title">Bank-grade encryption</div>
+            <p class="pf-desc">Wise uses TLS encryption and PCI-DSS Level 1 compliance — the same standard as major banks. Your payment data never touches our servers.</p>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-num">02</div>
+          <div>
+            <div class="pf-title">Pay in under 90 seconds</div>
+            <p class="pf-desc">One tap with Apple Pay, or enter your card. No account required. No redirects to unfamiliar pages.</p>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-num">03</div>
+          <div>
+            <div class="pf-title">Dispute protection</div>
+            <p class="pf-desc">Card payments via Wise carry standard chargeback rights. If something goes wrong, your bank has your back — as does our free exchange policy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal d2">
+      <div class="payment-card">
+        <div class="payment-card-title">Ready to order?</div>
+        <p class="payment-card-sub">Select your product above and proceed to checkout. One secure link handles everything.</p>
+
+        <div class="payment-methods">
+          <div class="pay-method">
+            <span class="pay-method-icon">⌘</span>
+            Apple Pay
+            <span class="pay-method-note">One tap</span>
+          </div>
+          <div class="pay-method">
+            <span class="pay-method-icon">💳</span>
+            Debit / Credit Card
+            <span class="pay-method-note">Visa · Mastercard</span>
+          </div>
+          <div class="pay-method">
+            <span class="pay-method-icon">🌐</span>
+            Google Pay
+            <span class="pay-method-note">Android</span>
+          </div>
+        </div>
+
+        <div class="payment-cta-group">
+          <a href="[YOUR_WISE_PAYMENT_LINK_HERE]" class="payment-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout (Apple Pay / Card)
+          </a>
+          <div class="payment-secure-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secured &amp; processed by <strong style="color:var(--gold-lt);margin:0 4px;">Wise</strong> · PCI-DSS compliant
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════ -->
+<section id="how">
+  <div style="max-width:600px;margin-bottom:0" class="reveal">
+    <div class="sec-kicker">How It Works</div>
+    <h2 class="sec-h2">Order in four<br><em>simple steps.</em></h2>
+  </div>
+
+  <div class="how-grid">
+    <div class="how-step reveal">
+      <div class="how-step-num">01</div>
+      <div class="how-step-icon">🔍</div>
+      <div class="how-step-title">Browse &amp; choose</div>
+      <p class="how-step-desc">Find the product you want on this page. Each listing shows the exact price including UAE delivery.</p>
+    </div>
+    <div class="how-step reveal d1">
+      <div class="how-step-num">02</div>
+      <div class="how-step-icon">🔒</div>
+      <div class="how-step-title">Secure checkout</div>
+      <p class="how-step-desc">Tap "Secure Checkout." You are taken to a Wise payment page. Pay by card, Apple Pay, or Google Pay in under 90 seconds.</p>
+    </div>
+    <div class="how-step reveal d2">
+      <div class="how-step-num">03</div>
+      <div class="how-step-icon">📦</div>
+      <div class="how-step-title">We dispatch same day</div>
+      <p class="how-step-desc">Payment confirmed → order placed from UAE-regional stock → dispatched the same business day. You receive tracking within 24 hours.</p>
+    </div>
+    <div class="how-step reveal d3">
+      <div class="how-step-num">04</div>
+      <div class="how-step-icon">🚪</div>
+      <div class="how-step-title">Delivered to your door</div>
+      <p class="how-step-desc">3 to 7 business days, anywhere in the UAE. No collection points. No waiting at a depot. Door to door.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     FOOTER
+════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Havenco</div>
+      <div class="footer-brand-tag">UAE Home Goods · Est. 2024</div>
+      <p class="footer-brand-desc">Premium, curated home goods delivered across the UAE in 3 to 7 days. Secure checkout powered by Wise.</p>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Shop</div>
+      <ul class="footer-links">
+        <li><a href="#featured">Rain Cloud Diffuser</a></li>
+        <li><a href="#products">Resistance Bands</a></li>
+        <li><a href="#products">Posture Corrector</a></li>
+        <li><a href="#products">Silk Pillowcase</a></li>
+        <li><a href="#products">Kitchen Organiser</a></li>
+        <li><a href="#products">LED Ring Light</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Information</div>
+      <ul class="footer-links">
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Delivery Policy</a></li>
+        <li><a href="#">Returns &amp; Exchange</a></li>
+        <li><a href="[YOUR_WISE_PAYMENT_LINK_HERE]">🔒 Secure Checkout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Havenco. All rights reserved. UAE Home Goods.</div>
+    <ul class="footer-legal">
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Refund Policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════
+     JS
+════════════════════════════════ -->
+<script>
+  /* mobile nav */
+  const ham = document.getElementById('ham');
+  const mob = document.getElementById('mobNav');
+  ham.addEventListener('click', () => mob.classList.toggle('open'));
+  function closeMob() { mob.classList.remove('open'); }
+
+  /* scroll reveal */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* nav shadow on scroll */
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.boxShadow =
+      window.scrollY > 40 ? '0 2px 24px rgba(28,26,24,.08)' : 'none';
+  });
+</script>
+
+</body>
+</html>
