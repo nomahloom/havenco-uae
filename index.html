@@ -1,844 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Havenco UAE — Rain Cloud Diffuser & premium home goods. Delivered across UAE in 3–7 days. Order via WhatsApp. Cash or Card accepted."/>
+<meta name="keywords" content="buy rain cloud diffuser UAE, rain cloud diffuser Dubai, ASMR diffuser UAE, wellness home goods Dubai, premium home accessories UAE"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Havenco · Premium UAE Home Goods"/>
+<meta property="og:description" content="Rain Cloud Diffuser · Silk Pillowcase · Resistance Bands — UAE-stocked, 3–7 day delivery. Order via WhatsApp."/>
+<meta property="og:image" content="https://havenco.ae/og-cover.jpg"/>
+<meta property="og:url" content="https://havenco.ae"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<title>Havenco · UAE Home Goods · Rain Cloud Diffuser & More</title>
 
-  <!-- ─── SEO: enriched description with product keywords ─── -->
-  <meta name="description" content="Havenco UAE — Rain Cloud Diffuser, Silk Pillowcase, Resistance Bands, Bamboo Organiser & more. Premium home goods delivered across UAE in 3–7 days. Secure Wise checkout. Free exchange on defective items."/>
-  <meta name="keywords" content="buy rain cloud diffuser UAE, silk pillowcase Dubai, resistance bands UAE, home goods delivery Dubai, premium home accessories UAE"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Havenco","description":"Premium home goods curated for UAE living. Delivered in 3–7 days.","url":"https://havenco.ae","areaServed":"AE","currenciesAccepted":"AED","paymentAccepted":"Cash on Delivery, Credit Card","hasOfferCatalog":{"@type":"OfferCatalog","name":"Havenco Collection","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Rain Cloud Aroma Diffuser"},"price":"195","priceCurrency":"AED"},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Silk Pillowcase"},"price":"79","priceCurrency":"AED"},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Resistance Band Set"},"price":"65","priceCurrency":"AED"}]}}
+</script>
 
-  <!-- ─── Open Graph: rich preview when shared on WhatsApp / Instagram ─── -->
-  <meta property="og:type"        content="website"/>
-  <meta property="og:title"       content="Havenco · Premium UAE Home Goods"/>
-  <meta property="og:description" content="Rain Cloud Diffuser · Silk Pillowcase · Resistance Bands — UAE-stocked, 3–7 day delivery, secure Wise checkout."/>
-  <meta property="og:image"       content="https://havenco.ae/og-cover.jpg"/>
-  <meta property="og:url"         content="https://havenco.ae"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
-  <title>Havenco · UAE Home Goods · Rain Cloud Diffuser &amp; More</title>
+<style>
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS — Dark Wellness Palette
+═══════════════════════════════════════════════ */
+:root {
+  --ivory:   #FAF7F2;
+  --ivory-2: #F2EDE4;
+  --ivory-3: #E8E0D5;
+  --parch:   #EDE8DF;
+  --gold:    #C9A84C;
+  --gold-lt: #E2C070;
+  --gold-dk: #A07830;
+  --charcoal:#1A1814;
+  --ink:     #0F0E0C;
+  --ink-2:   #3A3530;
+  --dark-bg: #121010;
+  --dark-card:#1E1B17;
+  --dark-card2:#252017;
+  --mist:    #7A7268;
+  --mist-lt: #A89F94;
+  --wa-green:#25D366;
+  --wa-dark: #128C7E;
+  --rule:    rgba(201,168,76,.18);
+  --rule-lt: rgba(201,168,76,.10);
+  --shadow-sm:0 2px 16px rgba(0,0,0,.25);
+  --shadow-md:0 8px 40px rgba(0,0,0,.35);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.45);
+  --f-display:'Cormorant Garant', Georgia, serif;
+  --f-body:   'Jost', sans-serif;
+  --ease:     cubic-bezier(.22,.68,0,1.2);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+}
 
-  <!-- ─── Structured data: helps Google understand this is a store ─── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Havenco",
-    "description": "Premium home goods curated for UAE living. Delivered in 3–7 days.",
-    "url": "https://havenco.ae",
-    "areaServed": "AE",
-    "currenciesAccepted": "AED",
-    "paymentAccepted": "Credit Card, Apple Pay, Google Pay",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Havenco Collection",
-      "itemListElement": [
-        {"@type":"Offer","itemOffered":{"@type":"Product","name":"Rain Cloud Aroma Diffuser"},"price":"195","priceCurrency":"AED"},
-        {"@type":"Offer","itemOffered":{"@type":"Product","name":"Silk Pillowcase"},"price":"79","priceCurrency":"AED"},
-        {"@type":"Offer","itemOffered":{"@type":"Product","name":"Resistance Band Set"},"price":"65","priceCurrency":"AED"}
-      ]
-    }
-  }
-  </script>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--dark-bg);
+  color:var(--ivory-3);
+  font-family:var(--f-body);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
 
-  <!-- ─── Non-blocking Google Fonts ───────────────────────────────────────
-       Standard <link> blocks rendering until fonts load.
-       The media="print" trick loads fonts asynchronously without
-       a flash of unstyled text, then swaps to "all" once loaded.
-  ──────────────────────────────────────────────────────────────────────── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  </noscript>
+/* ═══ ANIMATIONS ════════════════════════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes stockPulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes mist{0%,100%{transform:translateY(0) scaleX(1);opacity:.6}50%{transform:translateY(-8px) scaleX(1.05);opacity:.9}}
+@keyframes drop{0%{transform:translateY(-10px);opacity:0}70%{opacity:1}100%{transform:translateY(30px);opacity:0}}
+@keyframes glow{0%,100%{box-shadow:0 0 16px rgba(201,168,76,.15)}50%{box-shadow:0 0 32px rgba(201,168,76,.35)}}
 
-  <style>
-    /* ─────────────────────────────────────
-       TOKENS — unchanged from original
-    ───────────────────────────────────── */
-    :root {
-      --ivory:     #FAF7F2;
-      --ivory-2:   #F2EDE4;
-      --ivory-3:   #E8E0D5;
-      --parch:     #EDE8DF;
-      --gold:      #B8964E;
-      --gold-lt:   #D4AE6A;
-      --gold-dk:   #947838;
-      --charcoal:  #1C1A18;
-      --ink:       #2C2825;
-      --ink-2:     #4A453F;
-      --mist:      #8C857C;
-      --mist-lt:   #B8B0A6;
-      --rule:      rgba(184,150,78,.22);
-      --rule-lt:   rgba(184,150,78,.10);
-      --shadow-sm: 0 2px 16px rgba(28,26,24,.06);
-      --shadow-md: 0 8px 40px rgba(28,26,24,.10);
-      --shadow-lg: 0 20px 60px rgba(28,26,24,.13);
-      --f-display: 'Cormorant Garant', Georgia, serif;
-      --f-body:    'Jost', sans-serif;
-      --ease:      cubic-bezier(.22,.68,0,1.2);
-      --ease-out:  cubic-bezier(.16,1,.3,1);
-    }
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--ivory);
-      color: var(--ink);
-      font-family: var(--f-body);
-      font-weight: 300;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
+/* ═══ TOOLBAR (Copy / PDF / Markdown) ══════════ */
+.toolbar{
+  position:fixed;bottom:28px;right:24px;z-index:900;
+  display:flex;flex-direction:column;gap:10px;
+  align-items:flex-end;
+}
+.toolbar-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--dark-card);border:1px solid var(--rule);
+  color:var(--gold-lt);
+  font-family:var(--f-body);font-size:10px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:10px 16px;border-radius:3px;cursor:pointer;
+  transition:background .2s,border-color .2s,transform .15s;
+  white-space:nowrap;box-shadow:var(--shadow-md);
+}
+.toolbar-btn:hover{background:var(--dark-card2);border-color:var(--gold);transform:translateX(-3px);}
+.toolbar-btn svg{width:13px;height:13px;flex-shrink:0;stroke:var(--gold);}
+.toolbar-label{display:inline;}
 
-    /* ─────────────────────────────────────
-       ANIMATIONS
-    ───────────────────────────────────── */
-    @keyframes fadeUp   { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes fadeIn   { from{opacity:0} to{opacity:1} }
-    @keyframes shimmer  { 0%{background-position:-400px 0} 100%{background-position:400px 0} }
-    @keyframes ticker   { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-    @keyframes pulse    { 0%,100%{opacity:1} 50%{opacity:.5} }
+/* ═══ ANNOUNCEMENT STRIP ════════════════════════ */
+.strip{background:var(--charcoal);padding:9px 0;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.12);}
+.strip-track{display:inline-block;white-space:nowrap;animation:ticker 42s linear infinite;}
+.strip-track span{font-family:var(--f-body);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin:0 52px;}
+.strip-track span::before{content:'✦ ';}
+.strip-track span.urgent{color:#fff;}
+.strip-track span.urgent::before{content:'🎁 ';}
 
-    /* ─── scarcity pulse: draws the eye to low-stock indicators ─── */
-    @keyframes stockPulse {
-      0%,100% { opacity:1; }
-      50%      { opacity:.6; }
-    }
+/* ═══ NAV ════════════════════════════════════════ */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(18,16,14,.92);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--rule-lt);
+  height:64px;display:flex;align-items:center;
+  padding:0 6%;gap:40px;transition:box-shadow .3s;
+}
+.nav-logo{display:flex;flex-direction:column;gap:0;margin-right:auto;}
+.nav-logo-word{font-family:var(--f-display);font-size:22px;font-weight:600;color:var(--ivory);letter-spacing:.06em;line-height:1;}
+.nav-logo-sub{font-family:var(--f-body);font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:2px;}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mist-lt);transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-wa{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--wa-green);color:#fff !important;
+  font-size:10px !important;font-weight:700 !important;
+  letter-spacing:.12em !important;padding:9px 18px;
+  border-radius:2px;transition:background .2s !important;
+}
+.nav-wa:hover{background:var(--wa-dark) !important;}
+.nav-wa svg{width:14px;height:14px;}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:auto;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ivory-3);transition:transform .25s;}
+.mob-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--dark-card);border-bottom:1px solid var(--rule-lt);padding:24px 6%;flex-direction:column;gap:18px;z-index:199;}
+.mob-nav.open{display:flex;}
+.mob-nav a{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mist-lt);padding-bottom:14px;border-bottom:1px solid var(--rule-lt);}
 
-    .reveal {
-      opacity:0; transform:translateY(28px);
-      transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
-    }
-    .reveal.in { opacity:1; transform:translateY(0); }
-    .d1 { transition-delay:.08s; }
-    .d2 { transition-delay:.16s; }
-    .d3 { transition-delay:.24s; }
-    .d4 { transition-delay:.32s; }
+/* ═══ HERO ═══════════════════════════════════════ */
+.hero{
+  min-height:calc(100svh - 64px);
+  display:flex;align-items:center;
+  position:relative;padding:80px 6% 80px;overflow:hidden;
+  background:
+    radial-gradient(ellipse 70% 60% at 75% 50%,rgba(201,168,76,.06) 0%,transparent 65%),
+    radial-gradient(ellipse 50% 80% at 10% 80%,rgba(201,168,76,.04) 0%,transparent 55%),
+    var(--dark-bg);
+}
+.hero::after{content:'';position:absolute;top:10%;bottom:10%;right:42%;width:1px;background:linear-gradient(to bottom,transparent,var(--rule),var(--rule),transparent);}
+.hero-left{position:relative;z-index:1;max-width:580px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--f-body);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;animation:fadeUp .7s var(--ease-out) both;}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.hero-h1{font-family:var(--f-display);font-weight:300;font-size:clamp(42px,6.5vw,78px);line-height:1.05;color:var(--ivory);letter-spacing:-.01em;margin-bottom:28px;animation:fadeUp .7s .08s var(--ease-out) both;}
+.hero-h1 em{font-style:italic;font-weight:400;color:var(--gold-lt);}
+.hero-sub{font-size:16px;font-weight:300;color:var(--mist-lt);max-width:420px;line-height:1.8;margin-bottom:44px;animation:fadeUp .7s .16s var(--ease-out) both;}
+.hero-btns{display:flex;align-items:center;gap:16px;flex-wrap:wrap;animation:fadeUp .7s .22s var(--ease-out) both;}
+.hero-trust{margin-top:28px;animation:fadeUp .7s .32s var(--ease-out) both;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.hero-trust-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:400;color:var(--mist-lt);}
+.hero-trust-item span{font-size:16px;}
 
-    /* ─────────────────────────────────────
-       ANNOUNCEMENT STRIP
-       Added: "Free delivery this week" urgency message
-    ───────────────────────────────────── */
-    .strip { background:var(--charcoal); padding:9px 0; overflow:hidden; }
-    .strip-track {
-      display:inline-block; white-space:nowrap;
-      animation:ticker 42s linear infinite;
-    }
-    .strip-track span {
-      font-family:var(--f-body);
-      font-size:11px; font-weight:500;
-      letter-spacing:.18em; text-transform:uppercase;
-      color:var(--gold-lt); margin:0 52px;
-    }
-    .strip-track span::before { content:'✦  '; }
-    /* The urgency span gets a brighter gold to stand out in the ticker */
-    .strip-track span.urgent { color:#fff; }
-    .strip-track span.urgent::before { content:'🎁  '; }
+/* hero right panel */
+.hero-panel{position:absolute;right:0;top:0;bottom:0;width:40%;display:flex;align-items:center;justify-content:center;animation:fadeIn .9s .4s both;}
+.hero-panel-inner{
+  width:85%;height:72%;
+  background:linear-gradient(135deg,var(--dark-card) 0%,var(--charcoal) 100%);
+  border-radius:4px;border:1px solid var(--rule);
+  box-shadow:var(--shadow-lg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  position:relative;overflow:hidden;animation:glow 3s ease-in-out infinite;
+}
+.hero-panel-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(201,168,76,.07),transparent);}
+/* Rain animation */
+.rain-drops{position:absolute;top:0;left:0;right:0;height:40%;overflow:hidden;}
+.rain-drops span{position:absolute;width:2px;border-radius:2px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,.5));animation:drop 1.4s linear infinite;}
+.rain-drops span:nth-child(1){left:20%;height:18px;animation-delay:0s;}
+.rain-drops span:nth-child(2){left:35%;height:24px;animation-delay:.3s;}
+.rain-drops span:nth-child(3){left:50%;height:14px;animation-delay:.6s;}
+.rain-drops span:nth-child(4){left:65%;height:20px;animation-delay:.9s;}
+.rain-drops span:nth-child(5){left:80%;height:16px;animation-delay:.15s;}
+.hero-product-icon{font-size:68px;filter:drop-shadow(0 8px 24px rgba(201,168,76,.2));position:relative;z-index:1;}
+.mist-bar{width:60%;height:8px;border-radius:4px;background:rgba(201,168,76,.15);animation:mist 2.5s ease-in-out infinite;position:relative;z-index:1;}
+.hero-product-label{font-family:var(--f-display);font-size:15px;font-weight:500;color:var(--ivory);letter-spacing:.06em;position:relative;z-index:1;}
+.hero-product-sub{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);position:relative;z-index:1;}
+.hero-features-mini{display:flex;flex-direction:column;gap:5px;position:relative;z-index:1;margin-top:4px;}
+.hfm{font-size:10px;font-weight:400;color:var(--mist-lt);letter-spacing:.06em;text-align:center;}
+.stat-card{position:absolute;background:var(--dark-card2);border:1px solid var(--rule);border-radius:6px;padding:10px 14px;box-shadow:var(--shadow-md);font-family:var(--f-body);}
+.stat-card.s1{bottom:12%;left:-10%;}
+.stat-card.s2{top:12%;right:-6%;}
+.stat-num{font-family:var(--f-display);font-size:20px;font-weight:600;color:var(--gold-lt);line-height:1;}
+.stat-label{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-top:3px;}
 
-    /* ─────────────────────────────────────
-       NAV
-    ───────────────────────────────────── */
-    nav {
-      position:sticky; top:0; z-index:200;
-      background:rgba(250,247,242,.94);
-      backdrop-filter:blur(20px);
-      -webkit-backdrop-filter:blur(20px);
-      border-bottom:1px solid var(--rule-lt);
-      height:64px; display:flex; align-items:center;
-      padding:0 6%; gap:40px;
-      transition: box-shadow .3s;
-    }
-    .nav-logo { display:flex; flex-direction:column; gap:0; margin-right:auto; }
-    .nav-logo-word {
-      font-family:var(--f-display); font-size:22px; font-weight:600;
-      color:var(--charcoal); letter-spacing:.06em; line-height:1;
-    }
-    .nav-logo-sub {
-      font-family:var(--f-body); font-size:9px; font-weight:500;
-      letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-top:2px;
-    }
-    .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
-    .nav-links a {
-      font-size:11px; font-weight:500; letter-spacing:.14em;
-      text-transform:uppercase; color:var(--ink-2); transition:color .2s;
-    }
-    .nav-links a:hover { color:var(--gold); }
-    .nav-checkout {
-      display:inline-flex; align-items:center; gap:8px;
-      background:var(--charcoal); color:var(--ivory) !important;
-      font-size:10px !important; font-weight:600 !important;
-      letter-spacing:.16em !important; padding:9px 20px;
-      border-radius:2px; transition:background .2s !important;
-    }
-    .nav-checkout:hover { background:var(--ink-2) !important; }
-    .hamburger {
-      display:none; flex-direction:column; gap:5px;
-      background:none; border:none; cursor:pointer; padding:4px; margin-left:auto;
-    }
-    .hamburger span {
-      display:block; width:22px; height:1.5px;
-      background:var(--charcoal); transition:transform .25s;
-    }
-    .mob-nav {
-      display:none; position:fixed; top:64px; left:0; right:0;
-      background:var(--ivory); border-bottom:1px solid var(--rule-lt);
-      padding:24px 6%; flex-direction:column; gap:18px; z-index:199;
-    }
-    .mob-nav.open { display:flex; }
-    .mob-nav a {
-      font-size:12px; font-weight:500; letter-spacing:.14em;
-      text-transform:uppercase; color:var(--ink-2);
-      padding-bottom:14px; border-bottom:1px solid var(--rule-lt);
-    }
+/* ═══ BUTTONS ════════════════════════════════════ */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--ivory);color:var(--charcoal);font-family:var(--f-body);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:16px 32px;border-radius:2px;transition:background .2s,transform .15s,box-shadow .2s;}
+.btn-primary:hover{background:var(--ivory-3);transform:translateY(-1px);box-shadow:var(--shadow-md);}
 
-    /* ─────────────────────────────────────
-       HERO
-    ───────────────────────────────────── */
-    .hero {
-      min-height:calc(100svh - 64px);
-      display:flex; align-items:center;
-      position:relative; padding:80px 6% 80px; overflow:hidden;
-    }
-    .hero::before {
-      content:''; position:absolute; inset:0;
-      background:
-        radial-gradient(ellipse 70% 60% at 75% 50%, rgba(184,150,78,.07) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(184,150,78,.05) 0%, transparent 55%);
-      pointer-events:none;
-    }
-    .hero::after {
-      content:''; position:absolute; top:10%; bottom:10%; right:42%;
-      width:1px;
-      background:linear-gradient(to bottom, transparent, var(--rule), var(--rule), transparent);
-    }
-    .hero-left { position:relative; z-index:1; max-width:580px; }
-    .hero-eyebrow {
-      display:inline-flex; align-items:center; gap:12px;
-      font-family:var(--f-body); font-size:10px; font-weight:600;
-      letter-spacing:.24em; text-transform:uppercase; color:var(--gold);
-      margin-bottom:28px; animation:fadeUp .7s var(--ease-out) both;
-    }
-    .hero-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--gold); }
-    .hero-h1 {
-      font-family:var(--f-display); font-weight:300;
-      font-size:clamp(44px, 7vw, 80px); line-height:1.05;
-      color:var(--charcoal); letter-spacing:-.01em; margin-bottom:28px;
-      animation:fadeUp .7s .08s var(--ease-out) both;
-    }
-    .hero-h1 em { font-style:italic; font-weight:400; color:var(--gold-dk); }
-    .hero-sub {
-      font-size:16px; font-weight:300; color:var(--ink-2);
-      max-width:420px; line-height:1.8; margin-bottom:44px;
-      animation:fadeUp .7s .16s var(--ease-out) both;
-    }
-    .hero-btns {
-      display:flex; align-items:center; gap:16px; flex-wrap:wrap;
-      animation:fadeUp .7s .22s var(--ease-out) both;
-    }
+.btn-wa{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--wa-green);color:#fff;
+  font-family:var(--f-body);font-size:11px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 32px;border-radius:2px;
+  transition:background .2s,transform .15s,box-shadow .2s;
+}
+.btn-wa:hover{background:var(--wa-dark);transform:translateY(-1px);box-shadow:0 8px 28px rgba(37,211,102,.25);}
+.btn-wa svg{width:16px;height:16px;flex-shrink:0;}
 
-    /* ─────────────────────────────────────
-       BUTTONS
-    ───────────────────────────────────── */
-    .btn-primary {
-      display:inline-flex; align-items:center; gap:10px;
-      background:var(--charcoal); color:var(--ivory);
-      font-family:var(--f-body); font-size:11px; font-weight:600;
-      letter-spacing:.16em; text-transform:uppercase;
-      padding:16px 32px; border-radius:2px;
-      transition:background .2s, transform .15s, box-shadow .2s;
-    }
-    .btn-primary:hover { background:var(--ink-2); transform:translateY(-1px); box-shadow:var(--shadow-md); }
-    .btn-gold {
-      display:inline-flex; align-items:center; gap:10px;
-      background:var(--gold); color:var(--ivory);
-      font-family:var(--f-body); font-size:11px; font-weight:600;
-      letter-spacing:.16em; text-transform:uppercase;
-      padding:16px 32px; border-radius:2px;
-      transition:background .2s, transform .15s, box-shadow .2s;
-    }
-    .btn-gold:hover { background:var(--gold-dk); transform:translateY(-1px); box-shadow:0 8px 28px rgba(184,150,78,.3); }
-    .btn-outline {
-      display:inline-flex; align-items:center; gap:10px;
-      background:transparent; color:var(--ink);
-      font-family:var(--f-body); font-size:11px; font-weight:500;
-      letter-spacing:.14em; text-transform:uppercase;
-      padding:15px 28px; border-radius:2px; border:1px solid var(--rule);
-      transition:border-color .2s, color .2s;
-    }
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold-dk); }
+.btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--ivory-3);font-family:var(--f-body);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:15px 28px;border-radius:2px;border:1px solid var(--rule);transition:border-color .2s,color .2s;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold-lt);}
 
-    /* ─────────────────────────────────────
-       WISE BADGE
-    ───────────────────────────────────── */
-    .wise-badge {
-      display:inline-flex; align-items:center; gap:9px;
-      background:var(--ivory-2); border:1px solid var(--rule-lt);
-      border-radius:4px; padding:8px 14px;
-      font-size:11px; font-weight:500; color:var(--mist); letter-spacing:.04em;
-    }
-    .wise-badge .lock-icon { width:12px; height:12px; color:var(--gold); }
-    .wise-badge strong { color:var(--ink-2); font-weight:600; }
-    .wise-badge .payment-icons { display:flex; align-items:center; gap:5px; margin-left:4px; }
-    .pay-chip {
-      background:var(--charcoal); color:var(--ivory);
-      font-size:8.5px; font-weight:700; letter-spacing:.05em;
-      padding:2px 6px; border-radius:2px; line-height:1.4;
-    }
-    .pay-chip.apple { background:#1C1A18; }
-    .pay-chip.visa  { background:#1A1F71; }
-    .pay-chip.mc    { background:#EB001B; }
+/* ═══ SECTION SCAFFOLDING ════════════════════════ */
+section{padding:100px 6%;}
+.sec-kicker{font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.sec-kicker::after{content:'';display:block;width:36px;height:1px;background:var(--gold);}
+.sec-h2{font-family:var(--f-display);font-weight:400;font-size:clamp(32px,4.5vw,52px);line-height:1.1;color:var(--ivory);margin-bottom:16px;}
+.sec-h2 em{font-style:italic;color:var(--gold-lt);}
+.sec-sub{font-size:15px;font-weight:300;color:var(--mist-lt);max-width:480px;line-height:1.8;}
+.rule{border:none;border-top:1px solid var(--rule-lt);margin:0 6%;}
 
-    /* hero decorative panel */
-    .hero-panel {
-      position:absolute; right:0; top:0; bottom:0; width:40%;
-      display:flex; align-items:center; justify-content:center;
-      animation:fadeIn .9s .4s both;
-    }
-    .hero-panel-inner {
-      width:85%; height:70%;
-      background:linear-gradient(135deg, var(--parch) 0%, var(--ivory-2) 100%);
-      border-radius:3px; border:1px solid var(--rule-lt);
-      box-shadow:var(--shadow-lg);
-      display:flex; flex-direction:column;
-      align-items:center; justify-content:center; gap:12px;
-      position:relative; overflow:hidden;
-    }
-    .hero-panel-inner::before {
-      content:''; position:absolute; inset:0;
-      background:radial-gradient(ellipse 80% 60% at 50% 30%, rgba(184,150,78,.08), transparent);
-    }
-    .hero-product-icon { font-size:72px; filter:drop-shadow(0 8px 24px rgba(28,26,24,.12)); position:relative; }
-    .hero-product-label { font-family:var(--f-display); font-size:15px; font-weight:500; color:var(--ink-2); letter-spacing:.06em; position:relative; }
-    .hero-product-sub { font-size:11px; font-weight:400; letter-spacing:.12em; text-transform:uppercase; color:var(--mist); position:relative; }
-    .stat-card { position:absolute; background:white; border-radius:6px; padding:12px 16px; box-shadow:var(--shadow-md); font-family:var(--f-body); }
-    .stat-card.s1 { bottom:14%; left:-8%; }
-    .stat-card.s2 { top:14%; right:-5%; }
-    .stat-num { font-family:var(--f-display); font-size:22px; font-weight:600; color:var(--charcoal); line-height:1; }
-    .stat-label { font-size:10px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--mist); margin-top:3px; }
+/* ═══ TRUST STRIP ════════════════════════════════ */
+.trust-strip{background:var(--dark-card);border-top:1px solid var(--rule-lt);border-bottom:1px solid var(--rule-lt);padding:0 6%;}
+.trust-items{display:grid;grid-template-columns:repeat(4,1fr);}
+.trust-item{display:flex;align-items:center;gap:14px;padding:32px 24px;border-right:1px solid var(--rule-lt);}
+.trust-item:last-child{border-right:none;}
+.trust-icon{width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(--dark-card2);}
+.trust-title{font-family:var(--f-display);font-size:15px;font-weight:500;color:var(--ivory);margin-bottom:2px;line-height:1.2;}
+.trust-desc{font-size:12px;font-weight:300;color:var(--mist);line-height:1.5;}
 
-    /* ─────────────────────────────────────
-       SECTION SCAFFOLDING
-    ───────────────────────────────────── */
-    section { padding:100px 6%; }
-    .sec-kicker {
-      font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
-      color:var(--gold); margin-bottom:14px;
-      display:flex; align-items:center; gap:12px;
-    }
-    .sec-kicker::after { content:''; display:block; width:36px; height:1px; background:var(--gold); }
-    .sec-h2 {
-      font-family:var(--f-display); font-weight:400;
-      font-size:clamp(32px, 4.5vw, 52px); line-height:1.1;
-      color:var(--charcoal); margin-bottom:16px;
-    }
-    .sec-h2 em { font-style:italic; color:var(--gold-dk); }
-    .sec-sub { font-size:15px; font-weight:300; color:var(--ink-2); max-width:480px; line-height:1.8; }
-    .rule { border:none; border-top:1px solid var(--rule-lt); margin:0 6%; }
+/* ═══ FEATURED PRODUCT ═══════════════════════════ */
+#featured{background:var(--charcoal);padding:100px 6%;}
+.featured-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.featured-image{background:var(--dark-card);border-radius:4px;border:1px solid var(--rule);height:520px;display:flex;align-items:center;justify-content:center;font-size:110px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);}
+.featured-image::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(201,168,76,.09),transparent);}
+.feat-detail{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:300;color:var(--mist-lt);padding:12px 0;border-bottom:1px solid var(--rule-lt);}
+.feat-detail:first-child{border-top:1px solid var(--rule-lt);}
+.feat-detail-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);min-width:110px;}
+.feat-detail-icon{font-size:16px;flex-shrink:0;}
 
-    /* ─────────────────────────────────────
-       CATEGORY FILTER BAR
-       New addition: allows buyers to browse
-       by category without scrolling past
-       irrelevant products.
-    ───────────────────────────────────── */
-    .filter-bar {
-      display:flex;
-      align-items:center;
-      gap:8px;
-      flex-wrap:wrap;
-      margin-bottom:48px;
-    }
-    .filter-btn {
-      font-family:var(--f-body);
-      font-size:11px;
-      font-weight:500;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      padding:9px 20px;
-      border-radius:2px;
-      border:1px solid var(--rule);
-      background:transparent;
-      color:var(--ink-2);
-      cursor:pointer;
-      transition:background .2s, color .2s, border-color .2s;
-    }
-    .filter-btn:hover { border-color:var(--gold); color:var(--gold-dk); }
-    /* Active state matches the gold brand colour */
-    .filter-btn.active {
-      background:var(--charcoal);
-      color:var(--ivory);
-      border-color:var(--charcoal);
-    }
-    /* Products hidden by the category filter fade out gracefully */
-    .prod-card.hidden {
-      display:none;
-    }
+/* scarcity */
+.prod-scarcity{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+.scarcity-stock{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:#E74C3C;letter-spacing:.02em;}
+.scarcity-stock::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#E74C3C;animation:stockPulse 2s ease-in-out infinite;flex-shrink:0;}
+.scarcity-sold{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:400;color:var(--mist);}
 
-    /* ─────────────────────────────────────
-       PRODUCT GRID
-    ───────────────────────────────────── */
-    #products { background:var(--ivory); }
-    .products-header { max-width:640px; margin-bottom:0; }
-    .products-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-    .prod-card {
-      background:white; border-radius:4px; border:1px solid var(--rule-lt);
-      overflow:hidden; transition:box-shadow .3s, transform .3s;
-      display:flex; flex-direction:column;
-    }
-    .prod-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); }
-    .prod-image {
-      background:var(--parch); height:200px;
-      display:flex; align-items:center; justify-content:center;
-      font-size:64px; position:relative; overflow:hidden;
-      border-bottom:1px solid var(--rule-lt);
-    }
-    .prod-image::after {
-      content:''; position:absolute; inset:0;
-      background:radial-gradient(ellipse 80% 80% at 50% 40%, rgba(184,150,78,.07), transparent);
-    }
-    .prod-badge {
-      position:absolute; top:12px; left:12px;
-      font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
-      background:var(--charcoal); color:var(--ivory);
-      padding:4px 10px; border-radius:2px; z-index:1;
-    }
-    .prod-badge.gold { background:var(--gold); }
-    .prod-body { padding:24px 22px; flex:1; display:flex; flex-direction:column; }
-    .prod-cat { font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mist); margin-bottom:6px; }
-    .prod-name { font-family:var(--f-display); font-size:19px; font-weight:500; color:var(--charcoal); line-height:1.25; margin-bottom:8px; }
-    .prod-desc { font-size:13px; font-weight:300; color:var(--ink-2); line-height:1.65; margin-bottom:12px; flex:1; }
+/* checkout note */
+.checkout-note{font-size:11px;font-weight:300;color:var(--mist);line-height:1.55;margin-top:10px;padding-top:10px;border-top:1px solid var(--rule-lt);}
+.checkout-note strong{font-weight:600;color:var(--wa-green);}
 
-    /* ─── Scarcity signal ──────────────────────────────────────────────
-       Displayed beneath the product description.
-       Two signals: remaining stock (urgent red) + sold today (social proof).
-       The pulsing animation on the stock dot catches the eye without being
-       aggressive — it signals urgency while maintaining the premium tone.
-    ─────────────────────────────────────────────────────────────────── */
-    .prod-scarcity {
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:16px;
-      flex-wrap:wrap;
-    }
-    .scarcity-stock {
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      font-size:11px;
-      font-weight:500;
-      color:#C0392B;
-      letter-spacing:.02em;
-    }
-    .scarcity-stock::before {
-      content:'';
-      display:block;
-      width:7px; height:7px;
-      border-radius:50%;
-      background:#C0392B;
-      animation:stockPulse 2s ease-in-out infinite;
-      flex-shrink:0;
-    }
-    .scarcity-sold {
-      display:inline-flex;
-      align-items:center;
-      gap:5px;
-      font-size:11px;
-      font-weight:400;
-      color:var(--mist);
-    }
+/* ═══ PRODUCT GRID ════════════════════════════════ */
+#products{background:var(--dark-bg);}
+.products-header{max-width:640px;margin-bottom:0;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.prod-card{background:var(--dark-card);border-radius:4px;border:1px solid var(--rule-lt);overflow:hidden;transition:box-shadow .3s,transform .3s;display:flex;flex-direction:column;}
+.prod-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--rule);}
+.prod-image{background:var(--dark-card2);height:200px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden;border-bottom:1px solid var(--rule-lt);}
+.prod-image::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 40%,rgba(201,168,76,.06),transparent);}
+.prod-badge{position:absolute;top:12px;left:12px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--charcoal);color:var(--ivory);padding:4px 10px;border-radius:2px;z-index:1;}
+.prod-badge.gold{background:var(--gold);color:var(--charcoal);}
+.prod-body{padding:24px 22px;flex:1;display:flex;flex-direction:column;}
+.prod-cat{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-bottom:6px;}
+.prod-name{font-family:var(--f-display);font-size:19px;font-weight:500;color:var(--ivory);line-height:1.25;margin-bottom:8px;}
+.prod-desc{font-size:13px;font-weight:300;color:var(--mist-lt);line-height:1.65;margin-bottom:12px;flex:1;}
+.prod-footer{border-top:1px solid var(--rule-lt);padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.prod-price{font-family:var(--f-display);font-size:22px;font-weight:500;color:var(--ivory);}
+.prod-price-note{font-size:11px;color:var(--mist);margin-top:1px;font-weight:300;}
+.prod-cta{display:inline-flex;align-items:center;gap:7px;background:var(--wa-green);color:#fff;font-family:var(--f-body);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:11px 16px;border-radius:2px;white-space:nowrap;transition:background .2s,box-shadow .2s;}
+.prod-cta:hover{background:var(--wa-dark);box-shadow:0 4px 16px rgba(37,211,102,.2);}
+.prod-cta svg{width:12px;height:12px;flex-shrink:0;}
 
-    .prod-footer {
-      border-top:1px solid var(--rule-lt); padding-top:18px;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-    }
-    .prod-price { font-family:var(--f-display); font-size:22px; font-weight:500; color:var(--charcoal); }
-    .prod-price-note { font-size:11px; color:var(--mist); margin-top:1px; font-weight:300; }
-    .prod-cta {
-      display:inline-flex; align-items:center; gap:7px;
-      background:var(--charcoal); color:var(--ivory);
-      font-family:var(--f-body); font-size:10px; font-weight:600;
-      letter-spacing:.14em; text-transform:uppercase;
-      padding:11px 18px; border-radius:2px; white-space:nowrap;
-      transition:background .2s, box-shadow .2s;
-    }
-    .prod-cta:hover { background:var(--ink-2); box-shadow:var(--shadow-sm); }
-    .prod-cta svg { width:11px; height:11px; flex-shrink:0; }
+/* filter bar */
+.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:48px;}
+.filter-btn{font-family:var(--f-body);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:9px 20px;border-radius:2px;border:1px solid var(--rule);background:transparent;color:var(--mist-lt);cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.filter-btn:hover{border-color:var(--gold);color:var(--gold-lt);}
+.filter-btn.active{background:var(--gold);color:var(--charcoal);border-color:var(--gold);font-weight:700;}
+.prod-card.hidden{display:none;}
 
-    /* ─── Post-checkout instruction ────────────────────────────────────
-       The single most important addition for conversion retention.
-       After tapping checkout, many mobile buyers feel lost — they paid
-       but don't know what happens next. This one line eliminates that
-       anxiety window before it opens.
-    ─────────────────────────────────────────────────────────────────── */
-    .checkout-note {
-      font-size:11px;
-      font-weight:300;
-      color:var(--mist);
-      line-height:1.55;
-      margin-top:10px;
-      padding-top:10px;
-      border-top:1px solid var(--rule-lt);
-    }
-    .checkout-note strong { font-weight:500; color:var(--ink-2); }
+/* ═══ TESTIMONIALS ═══════════════════════════════ */
+#testimonials{background:var(--charcoal);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+.testi-card{background:var(--dark-card);border:1px solid var(--rule-lt);border-radius:4px;padding:32px 28px;display:flex;flex-direction:column;gap:16px;transition:box-shadow .3s;}
+.testi-card:hover{box-shadow:var(--shadow-md);border-color:var(--rule);}
+.testi-stars{color:var(--gold);font-size:14px;letter-spacing:.1em;}
+.testi-body{font-family:var(--f-display);font-size:17px;font-weight:400;font-style:italic;color:var(--ivory-3);line-height:1.6;flex:1;}
+.testi-footer{display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--rule-lt);}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--dark-card2);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.testi-name{font-family:var(--f-display);font-size:15px;font-weight:500;color:var(--ivory);line-height:1.2;}
+.testi-meta{font-size:11px;font-weight:400;color:var(--mist);margin-top:2px;}
+.testi-product{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
 
-    .prod-wise {
-      display:flex; align-items:center; gap:6px;
-      margin-top:10px; font-size:11px; font-weight:400;
-      color:var(--mist-lt); letter-spacing:.02em;
-    }
-    .prod-wise svg { width:12px; height:12px; color:var(--gold); }
+/* ═══ DELIVERY PROOF ════════════════════════════ */
+#delivery-proof{background:var(--dark-bg);padding:100px 6%;}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
+.proof-scene{background:var(--dark-card);border:1px solid var(--rule-lt);border-radius:4px;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s;cursor:default;}
+.proof-scene:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.proof-scene::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 30%,rgba(201,168,76,.06),transparent);}
+.proof-scene-emoji{font-size:48px;position:relative;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));}
+.proof-scene-caption{font-family:var(--f-display);font-size:14px;font-weight:500;color:var(--ivory-3);letter-spacing:.04em;position:relative;text-align:center;}
+.proof-scene-sub{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);position:relative;}
+.proof-delivered{position:absolute;bottom:12px;right:12px;background:var(--dark-card2);border-radius:3px;padding:4px 10px;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);border:1px solid var(--rule);box-shadow:var(--shadow-sm);}
 
-    /* ─────────────────────────────────────
-       TRUST STRIP
-    ───────────────────────────────────── */
-    .trust-strip { background:var(--ivory-2); border-top:1px solid var(--rule-lt); border-bottom:1px solid var(--rule-lt); padding:0 6%; }
-    .trust-items { display:grid; grid-template-columns:repeat(4, 1fr); }
-    .trust-item { display:flex; align-items:center; gap:14px; padding:32px 24px; border-right:1px solid var(--rule-lt); }
-    .trust-item:last-child { border-right:none; }
-    .trust-icon { width:40px; height:40px; border-radius:50%; border:1px solid var(--rule); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; background:white; }
-    .trust-title { font-family:var(--f-display); font-size:15px; font-weight:500; color:var(--charcoal); margin-bottom:2px; line-height:1.2; }
-    .trust-desc { font-size:12px; font-weight:300; color:var(--mist); line-height:1.5; }
+/* ═══ ORDER / WhatsApp SECTION ═══════════════════ */
+#payment{background:var(--charcoal);color:var(--ivory);position:relative;overflow:hidden;}
+#payment::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,168,76,.07),transparent),radial-gradient(ellipse 40% 40% at 10% 20%,rgba(201,168,76,.04),transparent);}
+#payment .sec-h2{color:var(--ivory);}
+#payment .sec-sub{color:var(--mist-lt);max-width:520px;}
+.payment-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1;}
+.payment-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:6px;padding:44px;position:relative;overflow:hidden;}
+.payment-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.payment-card-title{font-family:var(--f-display);font-size:26px;font-weight:500;color:var(--ivory);margin-bottom:6px;}
+.payment-card-sub{font-size:13px;font-weight:300;color:var(--mist-lt);margin-bottom:32px;}
+.payment-methods{display:flex;flex-direction:column;gap:12px;margin-bottom:32px;}
+.pay-method{display:flex;align-items:center;gap:14px;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;font-size:14px;font-weight:400;color:var(--ivory);transition:border-color .2s;}
+.pay-method:hover{border-color:rgba(201,168,76,.4);}
+.pay-method-icon{font-size:20px;}
+.pay-method-note{font-size:11px;color:var(--mist-lt);margin-left:auto;}
+.payment-cta-group{display:flex;flex-direction:column;gap:12px;}
+.payment-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--wa-green);color:#fff;font-family:var(--f-body);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:18px 32px;border-radius:2px;transition:background .2s,transform .15s;}
+.payment-btn:hover{background:var(--wa-dark);transform:translateY(-1px);}
+.payment-btn svg{width:16px;height:16px;}
+.payment-secure-note{display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:400;color:var(--mist-lt);letter-spacing:.04em;}
+.payment-secure-note svg{width:12px;height:12px;stroke:var(--gold);}
+.payment-features{display:flex;flex-direction:column;gap:24px;}
+.pf-item{display:flex;gap:18px;align-items:flex-start;}
+.pf-num{font-family:var(--f-display);font-size:36px;font-weight:300;color:rgba(201,168,76,.25);line-height:1;flex-shrink:0;width:36px;}
+.pf-title{font-family:var(--f-display);font-size:18px;font-weight:500;color:var(--ivory);margin-bottom:4px;}
+.pf-desc{font-size:13px;font-weight:300;color:var(--mist-lt);line-height:1.65;}
 
-    /* ─────────────────────────────────────
-       FEATURED PRODUCT
-    ───────────────────────────────────── */
-    #featured { background:var(--ivory); padding:100px 6%; }
-    .featured-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-    .featured-image {
-      background:var(--parch); border-radius:4px; border:1px solid var(--rule-lt);
-      height:520px; display:flex; align-items:center; justify-content:center;
-      font-size:120px; position:relative; overflow:hidden; box-shadow:var(--shadow-lg);
-    }
-    .featured-image::before {
-      content:''; position:absolute; inset:0;
-      background:radial-gradient(ellipse 80% 60% at 50% 40%, rgba(184,150,78,.08), transparent);
-    }
-    .feat-detail {
-      display:flex; align-items:center; gap:10px;
-      font-size:12px; font-weight:400; color:var(--ink-2);
-      padding:12px 0; border-bottom:1px solid var(--rule-lt);
-    }
-    .feat-detail:first-child { border-top:1px solid var(--rule-lt); }
-    .feat-detail-label { font-size:10px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--mist); min-width:100px; }
+/* ═══ HOW IT WORKS ════════════════════════════════ */
+#how{background:var(--dark-card);}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px;}
+.how-step{background:var(--dark-bg);padding:40px 32px;border:1px solid var(--rule-lt);transition:box-shadow .3s;}
+.how-step:hover{box-shadow:var(--shadow-md);}
+.how-step-num{font-family:var(--f-display);font-size:52px;font-weight:300;color:var(--rule);line-height:1;margin-bottom:20px;}
+.how-step-icon{font-size:26px;margin-bottom:14px;}
+.how-step-title{font-family:var(--f-display);font-size:18px;font-weight:500;color:var(--ivory);margin-bottom:10px;line-height:1.25;}
+.how-step-desc{font-size:13px;font-weight:300;color:var(--mist-lt);line-height:1.65;}
 
-    /* ─────────────────────────────────────
-       TESTIMONIALS
-       New section. Placed between the product
-       grid and the payment section to deliver
-       social proof at the exact moment a buyer
-       is deciding whether to purchase.
-       Avatar initials are used rather than photos
-       to stay GDPR-safe and low-maintenance.
-    ───────────────────────────────────── */
-    #testimonials { background:var(--ivory-2); }
+/* ═══ FOOTER ══════════════════════════════════════ */
+footer{background:var(--ink);color:var(--ivory-3);padding:64px 6% 40px;}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:32px;}
+.footer-brand{font-family:var(--f-display);font-size:24px;font-weight:500;color:white;letter-spacing:.05em;margin-bottom:4px;}
+.footer-brand-tag{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.footer-brand-desc{font-size:13px;font-weight:300;color:rgba(232,224,213,.45);line-height:1.7;max-width:260px;}
+.footer-col-title{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mist-lt);margin-bottom:20px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-size:13px;font-weight:300;color:rgba(232,224,213,.5);transition:color .2s;}
+.footer-links a:hover{color:var(--gold-lt);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy{font-size:12px;font-weight:300;color:rgba(232,224,213,.3);}
+.footer-legal{display:flex;gap:24px;list-style:none;}
+.footer-legal a{font-size:12px;font-weight:300;color:rgba(232,224,213,.3);transition:color .2s;}
+.footer-legal a:hover{color:var(--gold-lt);}
 
-    .testi-grid {
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:24px;
-      margin-top:56px;
-    }
-    .testi-card {
-      background:white;
-      border:1px solid var(--rule-lt);
-      border-radius:4px;
-      padding:32px 28px;
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-      transition:box-shadow .3s;
-    }
-    .testi-card:hover { box-shadow:var(--shadow-md); }
-    .testi-stars {
-      color:var(--gold);
-      font-size:14px;
-      letter-spacing:.1em;
-    }
-    .testi-body {
-      font-family:var(--f-display);
-      font-size:17px;
-      font-weight:400;
-      font-style:italic;
-      color:var(--ink);
-      line-height:1.6;
-      flex:1;
-    }
-    .testi-footer {
-      display:flex;
-      align-items:center;
-      gap:14px;
-      padding-top:16px;
-      border-top:1px solid var(--rule-lt);
-    }
-    /* Emoji avatar — lightweight, no image needed, demographically flexible */
-    .testi-avatar {
-      width:42px; height:42px;
-      border-radius:50%;
-      background:var(--parch);
-      border:1px solid var(--rule);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:20px;
-      flex-shrink:0;
-    }
-    .testi-name {
-      font-family:var(--f-display);
-      font-size:15px;
-      font-weight:500;
-      color:var(--charcoal);
-      line-height:1.2;
-    }
-    .testi-meta {
-      font-size:11px;
-      font-weight:400;
-      color:var(--mist);
-      margin-top:2px;
-      /* Product name in gold links the review to a specific item */
-    }
-    .testi-product {
-      font-size:10px;
-      font-weight:600;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      color:var(--gold);
-    }
-
-    /* ─────────────────────────────────────
-       DELIVERY PROOF SECTION
-       Visual evidence that Havenco products
-       actually arrive in UAE homes.
-       Each "scene" uses emoji composition to
-       suggest a domestic UAE setting without
-       requiring real photography.
-    ───────────────────────────────────── */
-    #delivery-proof {
-      background:var(--ivory);
-      padding:100px 6%;
-    }
-    .proof-grid {
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:20px;
-      margin-top:56px;
-    }
-    .proof-scene {
-      background:var(--parch);
-      border:1px solid var(--rule-lt);
-      border-radius:4px;
-      aspect-ratio:4/3;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      position:relative;
-      overflow:hidden;
-      transition:box-shadow .3s, transform .3s;
-      cursor:default;
-    }
-    .proof-scene:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
-    .proof-scene::before {
-      content:''; position:absolute; inset:0;
-      background:radial-gradient(ellipse 70% 60% at 50% 30%, rgba(184,150,78,.06), transparent);
-    }
-    .proof-scene-emoji {
-      font-size:52px;
-      position:relative;
-      filter:drop-shadow(0 4px 12px rgba(28,26,24,.1));
-    }
-    .proof-scene-caption {
-      font-family:var(--f-display);
-      font-size:14px;
-      font-weight:500;
-      color:var(--ink-2);
-      letter-spacing:.04em;
-      position:relative;
-      text-align:center;
-    }
-    .proof-scene-sub {
-      font-size:10px;
-      font-weight:500;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:var(--mist);
-      position:relative;
-    }
-    /* Delivered badge overlaid on bottom-right of each scene */
-    .proof-delivered {
-      position:absolute;
-      bottom:12px; right:12px;
-      background:white;
-      border-radius:3px;
-      padding:4px 10px;
-      font-size:9px;
-      font-weight:700;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      color:var(--gold-dk);
-      border:1px solid var(--rule);
-      box-shadow:var(--shadow-sm);
-    }
-
-    /* ─────────────────────────────────────
-       PAYMENT / WISE SECTION
-    ───────────────────────────────────── */
-    #payment { background:var(--charcoal); color:var(--ivory); position:relative; overflow:hidden; }
-    #payment::before {
-      content:''; position:absolute; inset:0;
-      background:
-        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184,150,78,.08), transparent),
-        radial-gradient(ellipse 40% 40% at 10% 20%, rgba(184,150,78,.05), transparent);
-    }
-    #payment .sec-h2 { color:var(--ivory); }
-    #payment .sec-sub { color:var(--mist-lt); max-width:520px; }
-    #payment .sec-kicker { color:var(--gold-lt); }
-    #payment .sec-kicker::after { background:var(--gold-dk); }
-    .payment-layout { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; z-index:1; }
-    .payment-card { background:rgba(250,247,242,.06); border:1px solid rgba(184,150,78,.2); border-radius:6px; padding:44px; position:relative; overflow:hidden; }
-    .payment-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
-    .payment-card-title { font-family:var(--f-display); font-size:26px; font-weight:500; color:var(--ivory); margin-bottom:6px; }
-    .payment-card-sub { font-size:13px; font-weight:300; color:var(--mist-lt); margin-bottom:32px; }
-    .payment-methods { display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
-    .pay-method { display:flex; align-items:center; gap:14px; padding:14px 18px; background:rgba(250,247,242,.05); border:1px solid rgba(250,247,242,.08); border-radius:4px; font-size:14px; font-weight:400; color:var(--ivory); transition:border-color .2s; }
-    .pay-method:hover { border-color:rgba(184,150,78,.4); }
-    .pay-method-icon { font-size:20px; }
-    .pay-method-note { font-size:11px; color:var(--mist-lt); margin-left:auto; }
-    .payment-cta-group { display:flex; flex-direction:column; gap:12px; }
-    .payment-btn { display:flex; align-items:center; justify-content:center; gap:10px; background:var(--gold); color:var(--ivory); font-family:var(--f-body); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; padding:18px 32px; border-radius:2px; transition:background .2s, transform .15s; }
-    .payment-btn:hover { background:var(--gold-lt); transform:translateY(-1px); }
-    .payment-btn svg { width:14px; height:14px; }
-    .payment-secure-note { display:flex; align-items:center; justify-content:center; gap:8px; font-size:11px; font-weight:400; color:var(--mist-lt); letter-spacing:.04em; }
-    .payment-secure-note svg { width:12px; height:12px; color:var(--gold); }
-    .wise-wordmark { font-family:var(--f-body); font-weight:700; letter-spacing:-.02em; }
-    .wise-wordmark .dot { color:var(--gold); }
-    .payment-features { display:flex; flex-direction:column; gap:24px; }
-    .pf-item { display:flex; gap:18px; align-items:flex-start; }
-    .pf-num { font-family:var(--f-display); font-size:36px; font-weight:300; color:rgba(184,150,78,.3); line-height:1; flex-shrink:0; width:36px; }
-    .pf-title { font-family:var(--f-display); font-size:18px; font-weight:500; color:var(--ivory); margin-bottom:4px; }
-    .pf-desc { font-size:13px; font-weight:300; color:var(--mist-lt); line-height:1.65; }
-
-    /* ─────────────────────────────────────
-       HOW IT WORKS
-    ───────────────────────────────────── */
-    #how { background:var(--ivory-2); }
-    .how-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:60px; }
-    .how-step { background:white; padding:40px 32px; position:relative; border:1px solid var(--rule-lt); transition:box-shadow .3s; }
-    .how-step:hover { box-shadow:var(--shadow-md); }
-    .how-step-num { font-family:var(--f-display); font-size:52px; font-weight:300; color:var(--rule); line-height:1; margin-bottom:20px; }
-    .how-step-icon { font-size:26px; margin-bottom:14px; }
-    .how-step-title { font-family:var(--f-display); font-size:18px; font-weight:500; color:var(--charcoal); margin-bottom:10px; line-height:1.25; }
-    .how-step-desc { font-size:13px; font-weight:300; color:var(--ink-2); line-height:1.65; }
-
-    /* ─────────────────────────────────────
-       FOOTER
-    ───────────────────────────────────── */
-    footer { background:var(--charcoal); color:var(--ivory-3); padding:64px 6% 40px; }
-    .footer-top { display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:60px; padding-bottom:48px; border-bottom:1px solid rgba(250,247,242,.08); margin-bottom:32px; }
-    .footer-brand { font-family:var(--f-display); font-size:24px; font-weight:500; color:white; letter-spacing:.05em; margin-bottom:4px; }
-    .footer-brand-tag { font-size:9px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
-    .footer-brand-desc { font-size:13px; font-weight:300; color:rgba(232,224,213,.5); line-height:1.7; max-width:260px; }
-    .footer-col-title { font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--mist-lt); margin-bottom:20px; }
-    .footer-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
-    .footer-links a { font-size:13px; font-weight:300; color:rgba(232,224,213,.55); transition:color .2s; }
-    .footer-links a:hover { color:var(--gold-lt); }
-    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
-    .footer-copy { font-size:12px; font-weight:300; color:rgba(232,224,213,.35); }
-    .footer-legal { display:flex; gap:24px; list-style:none; }
-    .footer-legal a { font-size:12px; font-weight:300; color:rgba(232,224,213,.35); transition:color .2s; }
-    .footer-legal a:hover { color:var(--gold-lt); }
-
-    /* ─────────────────────────────────────
-       RESPONSIVE
-    ───────────────────────────────────── */
-    @media (max-width:1024px) {
-      .products-grid { grid-template-columns:repeat(2,1fr); }
-      .testi-grid    { grid-template-columns:repeat(2,1fr); }
-      .proof-grid    { grid-template-columns:repeat(2,1fr); }
-      .hero-panel    { display:none; }
-      .hero::after   { display:none; }
-      .payment-layout { grid-template-columns:1fr; gap:48px; }
-      .featured-inner { grid-template-columns:1fr; }
-      .featured-image { height:320px; font-size:80px; }
-      .how-grid { grid-template-columns:repeat(2,1fr); }
-    }
-    @media (max-width:768px) {
-      .nav-links  { display:none; }
-      .hamburger  { display:flex; }
-      nav         { padding:0 5%; }
-      section     { padding:72px 5%; }
-      .products-grid { grid-template-columns:1fr; }
-      .testi-grid    { grid-template-columns:1fr; }
-      .trust-items { grid-template-columns:repeat(2,1fr); }
-      .trust-item  { border-right:none; border-bottom:1px solid var(--rule-lt); }
-      .trust-item:last-child { border-bottom:none; }
-      .footer-top  { grid-template-columns:1fr; gap:36px; }
-      .how-grid    { grid-template-columns:1fr; }
-      .hero-h1     { font-size:clamp(38px,11vw,58px); }
-      .hero-btns   { flex-direction:column; align-items:flex-start; }
-    }
-    @media (max-width:480px) {
-      .trust-items { grid-template-columns:1fr; }
-      .prod-footer { flex-direction:column; align-items:flex-start; gap:14px; }
-      .prod-cta    { width:100%; justify-content:center; }
-      .proof-grid  { grid-template-columns:1fr; }
-      .filter-bar  { gap:6px; }
-      .filter-btn  { font-size:10px; padding:8px 14px; }
-    }
-  </style>
+/* ═══ RESPONSIVE ══════════════════════════════════ */
+@media(max-width:1024px){
+  .products-grid{grid-template-columns:repeat(2,1fr);}
+  .testi-grid{grid-template-columns:repeat(2,1fr);}
+  .proof-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-panel{display:none;}
+  .hero::after{display:none;}
+  .payment-layout{grid-template-columns:1fr;gap:48px;}
+  .featured-inner{grid-template-columns:1fr;}
+  .featured-image{height:320px;font-size:80px;}
+  .how-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  nav{padding:0 5%;}
+  section{padding:72px 5%;}
+  .products-grid{grid-template-columns:1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  .trust-items{grid-template-columns:repeat(2,1fr);}
+  .trust-item{border-right:none;border-bottom:1px solid var(--rule-lt);}
+  .trust-item:last-child{border-bottom:none;}
+  .footer-top{grid-template-columns:1fr;gap:36px;}
+  .how-grid{grid-template-columns:1fr;}
+  .hero-h1{font-size:clamp(38px,11vw,58px);}
+  .hero-btns{flex-direction:column;align-items:flex-start;}
+  .toolbar-label{display:none;}
+  .toolbar-btn{padding:10px 12px;}
+}
+@media(max-width:480px){
+  .trust-items{grid-template-columns:1fr;}
+  .prod-footer{flex-direction:column;align-items:flex-start;gap:14px;}
+  .prod-cta{width:100%;justify-content:center;}
+  .proof-grid{grid-template-columns:1fr;}
+  .filter-bar{gap:6px;}
+  .filter-btn{font-size:10px;padding:8px 14px;}
+}
+</style>
 </head>
 <body>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
+     FLOATING TOOLBAR — Copy · PDF · Markdown
+══════════════════════════════════════════════ -->
+<div class="toolbar" role="toolbar" aria-label="Page actions">
+  <button class="toolbar-btn" onclick="copyPage()" title="Copy page content to clipboard (paste into Word)">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+    <span class="toolbar-label">Copy for Word</span>
+  </button>
+  <button class="toolbar-btn" onclick="downloadPDF()" title="Download as PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    <span class="toolbar-label">Download PDF</span>
+  </button>
+  <button class="toolbar-btn" onclick="downloadMarkdown()" title="Download as Markdown">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 15V9l2 2 2-2v6"/><path d="M15 13l2 2 2-2"/><line x1="17" y1="9" x2="17" y2="15"/></svg>
+    <span class="toolbar-label">Download .md</span>
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════════════
      ANNOUNCEMENT STRIP
-     Added: "Free delivery" urgency message
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <div class="strip" aria-hidden="true">
   <div class="strip-track">
     <span class="urgent">Free delivery this week on orders over AED 150</span>
     <span>Free exchange on defective items</span>
     <span>UAE-stocked · 3–7 day delivery</span>
-    <span>Secure checkout · Apple Pay &amp; Card</span>
-    <span>Powered by Wise — global payment security</span>
+    <span>Order via WhatsApp · Cash or Card Accepted</span>
+    <span>No waiting · Same-day dispatch confirmation</span>
     <span>Premium home goods · Curated for UAE living</span>
     <span class="urgent">Free delivery this week on orders over AED 150</span>
     <span>Free exchange on defective items</span>
     <span>UAE-stocked · 3–7 day delivery</span>
-    <span>Secure checkout · Apple Pay &amp; Card</span>
-    <span>Powered by Wise — global payment security</span>
+    <span>Order via WhatsApp · Cash or Card Accepted</span>
+    <span>No waiting · Same-day dispatch confirmation</span>
     <span>Premium home goods · Curated for UAE living</span>
   </div>
 </div>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      NAV
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <nav id="nav">
   <a href="#" class="nav-logo">
     <span class="nav-logo-word">Havenco</span>
     <span class="nav-logo-sub">UAE Home Goods</span>
   </a>
-
   <ul class="nav-links">
     <li><a href="#products">Shop</a></li>
     <li><a href="#featured">Featured</a></li>
     <li><a href="#how">Delivery</a></li>
-    <li><a href="#payment">Checkout</a></li>
+    <li><a href="#payment">Order</a></li>
     <li>
-      <!-- Nav CTA links to the general Wise page; product buttons use amount-specific links -->
-      <a href="https://wise.com/pay/me/hatima35" class="nav-checkout">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Secure Checkout
+      <a href="https://wa.me/971551359331" class="nav-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Order via WhatsApp
       </a>
     </li>
   </ul>
-
   <button class="hamburger" id="ham" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -848,58 +459,60 @@
   <a href="#products" onclick="closeMob()">Shop</a>
   <a href="#featured" onclick="closeMob()">Featured</a>
   <a href="#how" onclick="closeMob()">Delivery</a>
-  <a href="#payment" onclick="closeMob()">Checkout</a>
-  <a href="https://wise.com/pay/me/hatima35" style="color:var(--gold)">🔒 Secure Checkout</a>
+  <a href="#payment" onclick="closeMob()">Order</a>
+  <a href="https://wa.me/971551359331" target="_blank" rel="noopener" style="color:var(--wa-green);font-weight:600;">📲 Order via WhatsApp — Cash/Card Accepted</a>
 </div>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      HERO
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <section class="hero" id="home">
   <div class="hero-left">
-    <div class="hero-eyebrow">Premium Home Goods · UAE</div>
+    <div class="hero-eyebrow">Wellness · ASMR · Sanctuary Living</div>
     <h1 class="hero-h1">
-      Curated for<br>
-      <em>how you live</em><br>
-      in the UAE.
+      Transform Your<br>
+      Dubai Apartment<br>
+      Into a <em>Sanctuary.</em>
     </h1>
     <p class="hero-sub">
-      Trending home décor, wellness essentials, and bedroom pieces — sourced from UAE-regional stock, delivered to your door in 3 to 7 days. No waiting. No compromise.
+      The Rain Cloud Diffuser fills your room with soft mist, 7 ambient LED colours, and the gentle sound of rainfall. Stress relief you can feel — delivered to your door in 3–7 days.
     </p>
     <div class="hero-btns">
-      <a href="#products" class="btn-primary">Browse Products</a>
-      <a href="https://wise.com/pay/me/hatima35" class="btn-gold">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Secure Checkout (Apple Pay / Card)
+      <a href="#featured" class="btn-primary">See the Diffuser</a>
+      <a href="https://wa.me/971551359331" class="btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Order via WhatsApp — Cash/Card Accepted
       </a>
     </div>
-    <div style="margin-top:24px; animation:fadeUp .7s .32s var(--ease-out) both;">
-      <div class="wise-badge">
-        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Secure payments powered by&nbsp;<strong>Wise</strong>
-        <div class="payment-icons">
-          <span class="pay-chip apple">⌘ Pay</span>
-          <span class="pay-chip visa">VISA</span>
-          <span class="pay-chip mc">MC</span>
-        </div>
-      </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item"><span>🚚</span> 3–7 Day UAE Delivery</div>
+      <div class="hero-trust-item"><span>💬</span> WhatsApp Support</div>
+      <div class="hero-trust-item"><span>↩</span> Free Exchange</div>
     </div>
   </div>
 
   <div class="hero-panel">
     <div class="hero-panel-inner">
+      <div class="rain-drops">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
       <div class="hero-product-icon">🌧️</div>
+      <div class="mist-bar"></div>
       <div class="hero-product-label">Rain Cloud Diffuser</div>
       <div class="hero-product-sub">Bestseller · AED 195</div>
+      <div class="hero-features-mini">
+        <div class="hfm">✦ 7 LED Colours · White Noise · Essential Oil</div>
+        <div class="hfm">✦ 450ml · Up to 10 hrs · Type-C</div>
+      </div>
       <div class="stat-card s1"><div class="stat-num">3–7</div><div class="stat-label">Day UAE Delivery</div></div>
-      <div class="stat-card s2"><div class="stat-num">🔒</div><div class="stat-label">Wise Secured</div></div>
+      <div class="stat-card s2"><div class="stat-num">📲</div><div class="stat-label">WhatsApp Order</div></div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      TRUST STRIP
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <div class="trust-strip">
   <div class="trust-items">
     <div class="trust-item">
@@ -907,8 +520,8 @@
       <div><div class="trust-title">3–7 Day Delivery</div><div class="trust-desc">UAE-regional stock only</div></div>
     </div>
     <div class="trust-item">
-      <div class="trust-icon">🔒</div>
-      <div><div class="trust-title">Secure Checkout</div><div class="trust-desc">Powered by Wise</div></div>
+      <div class="trust-icon">💬</div>
+      <div><div class="trust-title">WhatsApp Ordering</div><div class="trust-desc">Cash or Card Accepted</div></div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">✦</div>
@@ -923,75 +536,56 @@
 
 <hr class="rule"/>
 
-<!-- ════════════════════════════════
-     FEATURED PRODUCT
-════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════
+     FEATURED — RAIN CLOUD DIFFUSER
+══════════════════════════════════════════════ -->
 <section id="featured">
   <div class="featured-inner">
     <div class="featured-image reveal">🌧️</div>
     <div class="reveal d1">
       <div class="sec-kicker">Featured Product</div>
       <h2 class="sec-h2">Rain Cloud<br><em>Aroma Diffuser</em></h2>
-      <!-- SEO H2 below targets "buy rain cloud diffuser UAE" search intent -->
       <p class="sec-sub" style="margin-bottom:32px">
-        Soothing rainfall sounds, 7-colour LED ambient light, ultrasonic mist with essential oil support. The piece UAE bedrooms are missing — and the one everyone who visits asks about.
+        Your Dubai apartment is only missing one thing. Soft mist, real rainfall ASMR sounds, 7-colour LED glow, essential oil support. This is the piece everyone who visits asks about — and the reason your bedroom finally feels like a sanctuary.
       </p>
+
       <div style="margin-bottom:32px;">
-        <div class="feat-detail"><span class="feat-detail-label">Function</span>Humidifier · Aroma diffuser · Night light · Rain sound generator</div>
-        <div class="feat-detail"><span class="feat-detail-label">Capacity</span>450ml water tank · Up to 10 hours continuous</div>
-        <div class="feat-detail"><span class="feat-detail-label">Light</span>7 LED colours · Cycle or fixed · Independent on/off</div>
-        <div class="feat-detail"><span class="feat-detail-label">Power</span>Type-C · 5V 2A · UAE-compatible adapter included</div>
-        <div class="feat-detail"><span class="feat-detail-label">Delivery</span>UAE-regional stock · 3–7 business days to your door</div>
+        <div class="feat-detail"><span class="feat-detail-icon">🌫️</span><span class="feat-detail-label">Function</span>Humidifier · Aroma diffuser · Night light · Rain sound generator</div>
+        <div class="feat-detail"><span class="feat-detail-icon">💧</span><span class="feat-detail-label">Capacity</span>450ml water tank · Up to 10 hours continuous mist</div>
+        <div class="feat-detail"><span class="feat-detail-icon">🌈</span><span class="feat-detail-label">LED Light</span>7 colours · Cycle or fixed · Independent on/off control</div>
+        <div class="feat-detail"><span class="feat-detail-icon">🔊</span><span class="feat-detail-label">White Noise</span>Built-in water-dripping ASMR sound — adjustable volume</div>
+        <div class="feat-detail"><span class="feat-detail-icon">🌿</span><span class="feat-detail-label">Essential Oil</span>Compatible · Add 3–5 drops to the water tank</div>
+        <div class="feat-detail"><span class="feat-detail-icon">🔌</span><span class="feat-detail-label">Power</span>Type-C · 5V 2A · UAE-compatible adapter included</div>
+        <div class="feat-detail"><span class="feat-detail-icon">🚚</span><span class="feat-detail-label">Delivery</span>UAE-regional stock · 3–7 business days to your door</div>
       </div>
-      <!-- Scarcity on featured product -->
+
       <div class="prod-scarcity" style="margin-bottom:20px;">
         <span class="scarcity-stock">9 left in UAE stock</span>
         <span class="scarcity-sold">· 23 sold this week</span>
       </div>
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:10px;">
+
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;flex-wrap:wrap;">
         <div>
-          <div style="font-family:var(--f-display);font-size:36px;font-weight:500;color:var(--charcoal);">AED 195</div>
-          <div style="font-size:12px;color:var(--mist);font-weight:300;">Free delivery across UAE</div>
+          <div style="font-family:var(--f-display);font-size:36px;font-weight:500;color:var(--ivory);">AED 195</div>
+          <div style="font-size:12px;color:var(--mist);font-weight:300;">Free delivery · Cash or Card on WhatsApp</div>
         </div>
-        <!--
-          Product-specific Wise link: amount=195 pre-fills the payment amount.
-          The ?reference param identifies this as a Rain Cloud order in your Wise dashboard.
-          NOTE: For full per-product traceability, create a separate reusable Wise link
-          for each product from your Wise dashboard and replace each href below.
-        -->
-        <a href="https://wise.com/pay/me/hatima35?amount=195&currency=AED&reference=RainCloudDiffuser"
-           class="btn-gold" style="flex:1;justify-content:center;"
-           target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Secure Checkout (Apple Pay / Card)
+        <a href="https://wa.me/971551359331?text=Hi%20Havenco!%20I%27d%20like%20to%20order%20the%20Rain%20Cloud%20Diffuser%20(AED%20195).%20My%20name%20is%3A%20%0AMy%20delivery%20address%20is%3A" class="btn-wa" style="flex:1;justify-content:center;" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Order via WhatsApp — Cash/Card Accepted
         </a>
       </div>
-      <!-- Post-checkout instruction on the featured product -->
-      <p class="checkout-note" style="margin-bottom:16px;">
-        After payment, <strong>WhatsApp us at +971 55 135 9331</strong> with your name and delivery address.
-        We confirm dispatch within 24 hours and send you tracking.
+      <p class="checkout-note">
+        Tap the button → WhatsApp opens with your order pre-filled. Just send your <strong>name + delivery address</strong>. We confirm dispatch within 24 hours and send you tracking.
       </p>
-      <div class="wise-badge" style="width:100%;justify-content:center;">
-        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Secure payments powered by&nbsp;<strong>Wise</strong>&nbsp;·
-        <div class="payment-icons">
-          <span class="pay-chip apple">⌘ Pay</span>
-          <span class="pay-chip visa">VISA</span>
-          <span class="pay-chip mc">MC</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <hr class="rule"/>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      PRODUCT GRID
-     Enhancements: category filter bar,
-     scarcity signals, product-specific
-     Wise links, post-checkout instructions.
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <section id="products">
   <div class="products-header reveal">
     <div class="sec-kicker">The Collection</div>
@@ -999,11 +593,6 @@
     <p class="sec-sub">We do not list hundreds of items. Every product in the Havenco collection is selected for UAE living — the light, the space, the air.</p>
   </div>
 
-  <!--
-    CATEGORY FILTER BAR
-    data-filter matches the data-category on each .prod-card.
-    JS at bottom toggles the .hidden class based on selection.
-  -->
   <div class="filter-bar reveal" style="margin-top:40px;">
     <button class="filter-btn active" data-filter="all">All Products</button>
     <button class="filter-btn" data-filter="bedroom">Bedroom &amp; Wellness</button>
@@ -1013,7 +602,7 @@
 
   <div class="products-grid">
 
-    <!-- Product 1: Rain Cloud Diffuser -->
+    <!-- Rain Cloud Diffuser -->
     <div class="prod-card reveal" data-category="bedroom">
       <div class="prod-image">
         🌧️
@@ -1022,7 +611,7 @@
       <div class="prod-body">
         <div class="prod-cat">Wellness · Bedroom</div>
         <div class="prod-name">Rain Cloud Aroma Diffuser</div>
-        <p class="prod-desc">Ultrasonic mist, real rainfall sounds, 7-colour LED, 450ml tank. The piece that transforms a bedroom from a place you sleep into a place you rest.</p>
+        <p class="prod-desc">Ultrasonic mist, real rainfall ASMR sounds, 7-colour LED, 450ml tank. Essential oil compatible. The piece that transforms a bedroom into a sanctuary.</p>
         <div class="prod-scarcity">
           <span class="scarcity-stock">9 left in UAE stock</span>
           <span class="scarcity-sold">· 23 sold this week</span>
@@ -1032,21 +621,16 @@
             <div class="prod-price">AED 195</div>
             <div class="prod-price-note">Free UAE delivery</div>
           </div>
-          <a href="https://wise.com/pay/me/hatima35?amount=195&currency=AED&reference=RainCloudDiffuser"
-             class="prod-cta" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout
+          <a href="https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Rain%20Cloud%20Diffuser%20-%20AED%20195%0AName%3A%20%0AAddress%3A" class="prod-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Order
           </a>
         </div>
-        <p class="checkout-note">After paying, WhatsApp <strong>+971 55 135 9331</strong> with your name &amp; address. We confirm dispatch within 24 hrs.</p>
-        <div class="prod-wise">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Apple Pay · Card · Powered by Wise
-        </div>
+        <p class="checkout-note">Tap → WhatsApp opens. Send your <strong>name + address</strong>. Dispatch confirmed within 24 hrs.</p>
       </div>
     </div>
 
-    <!-- Product 2: Resistance Bands -->
+    <!-- Resistance Bands -->
     <div class="prod-card reveal d1" data-category="fitness">
       <div class="prod-image">
         💪
@@ -1065,27 +649,22 @@
             <div class="prod-price">AED 65</div>
             <div class="prod-price-note">Free UAE delivery</div>
           </div>
-          <a href="https://wise.com/pay/me/hatima35?amount=65&currency=AED&reference=ResistanceBands"
-             class="prod-cta" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout
+          <a href="https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Resistance%20Band%20Set%20-%20AED%2065%0AName%3A%20%0AAddress%3A" class="prod-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Order
           </a>
         </div>
-        <p class="checkout-note">After paying, WhatsApp <strong>+971 55 135 9331</strong> with your name &amp; address. We confirm dispatch within 24 hrs.</p>
-        <div class="prod-wise">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Apple Pay · Card · Powered by Wise
-        </div>
+        <p class="checkout-note">Tap → WhatsApp opens. Send your <strong>name + address</strong>. Dispatch confirmed within 24 hrs.</p>
       </div>
     </div>
 
-    <!-- Product 3: Posture Corrector -->
+    <!-- Posture Corrector -->
     <div class="prod-card reveal d2" data-category="fitness">
       <div class="prod-image">💆</div>
       <div class="prod-body">
         <div class="prod-cat">Wellness · Desk</div>
         <div class="prod-name">Posture Corrector (Adjustable)</div>
-        <p class="prod-desc">For desk workers. Gently realigns the shoulders and upper back over 20–30 minutes daily. Fits under any clothing. Adjustable for all frame sizes.</p>
+        <p class="prod-desc">For desk workers. Gently realigns shoulders and upper back over 20–30 minutes daily. Fits under any clothing. Adjustable for all frame sizes.</p>
         <div class="prod-scarcity">
           <span class="scarcity-stock">11 left in UAE stock</span>
           <span class="scarcity-sold">· 8 sold this week</span>
@@ -1095,21 +674,16 @@
             <div class="prod-price">AED 75</div>
             <div class="prod-price-note">Free UAE delivery</div>
           </div>
-          <a href="https://wise.com/pay/me/hatima35?amount=75&currency=AED&reference=PostureCorrector"
-             class="prod-cta" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout
+          <a href="https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Posture%20Corrector%20-%20AED%2075%0AName%3A%20%0AAddress%3A" class="prod-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Order
           </a>
         </div>
-        <p class="checkout-note">After paying, WhatsApp <strong>+971 55 135 9331</strong> with your name &amp; address. We confirm dispatch within 24 hrs.</p>
-        <div class="prod-wise">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Apple Pay · Card · Powered by Wise
-        </div>
+        <p class="checkout-note">Tap → WhatsApp opens. Send your <strong>name + address</strong>. Dispatch confirmed within 24 hrs.</p>
       </div>
     </div>
 
-    <!-- Product 4: Silk Pillowcase -->
+    <!-- Silk Pillowcase -->
     <div class="prod-card reveal" data-category="bedroom">
       <div class="prod-image">
         💎
@@ -1118,7 +692,7 @@
       <div class="prod-body">
         <div class="prod-cat">Beauty · Bedroom</div>
         <div class="prod-name">Silk Pillowcase (Standard)</div>
-        <p class="prod-desc">22-momme mulberry silk. Reduces hair breakage, preserves moisture, and regulates temperature — notably in AC-heavy UAE bedrooms. A gift that looks expensive, because it is.</p>
+        <p class="prod-desc">22-momme mulberry silk. Reduces hair breakage, preserves moisture, regulates temperature — notably in AC-heavy UAE bedrooms. A gift that looks expensive, because it is.</p>
         <div class="prod-scarcity">
           <span class="scarcity-stock">7 left in UAE stock</span>
           <span class="scarcity-sold">· 17 sold this week</span>
@@ -1128,21 +702,16 @@
             <div class="prod-price">AED 79</div>
             <div class="prod-price-note">Free UAE delivery</div>
           </div>
-          <a href="https://wise.com/pay/me/hatima35?amount=79&currency=AED&reference=SilkPillowcase"
-             class="prod-cta" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout
+          <a href="https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Silk%20Pillowcase%20-%20AED%2079%0AName%3A%20%0AAddress%3A" class="prod-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Order
           </a>
         </div>
-        <p class="checkout-note">After paying, WhatsApp <strong>+971 55 135 9331</strong> with your name &amp; address. We confirm dispatch within 24 hrs.</p>
-        <div class="prod-wise">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Apple Pay · Card · Powered by Wise
-        </div>
+        <p class="checkout-note">Tap → WhatsApp opens. Send your <strong>name + address</strong>. Dispatch confirmed within 24 hrs.</p>
       </div>
     </div>
 
-    <!-- Product 5: Bamboo Organiser -->
+    <!-- Bamboo Organiser -->
     <div class="prod-card reveal d1" data-category="kitchen-desk">
       <div class="prod-image">🌿</div>
       <div class="prod-body">
@@ -1158,21 +727,16 @@
             <div class="prod-price">AED 89</div>
             <div class="prod-price-note">Free UAE delivery</div>
           </div>
-          <a href="https://wise.com/pay/me/hatima35?amount=89&currency=AED&reference=BambooOrganiser"
-             class="prod-cta" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout
+          <a href="https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Bamboo%20Kitchen%20Organiser%20-%20AED%2089%0AName%3A%20%0AAddress%3A" class="prod-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Order
           </a>
         </div>
-        <p class="checkout-note">After paying, WhatsApp <strong>+971 55 135 9331</strong> with your name &amp; address. We confirm dispatch within 24 hrs.</p>
-        <div class="prod-wise">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Apple Pay · Card · Powered by Wise
-        </div>
+        <p class="checkout-note">Tap → WhatsApp opens. Send your <strong>name + address</strong>. Dispatch confirmed within 24 hrs.</p>
       </div>
     </div>
 
-    <!-- Product 6: LED Ring Light -->
+    <!-- LED Ring Light -->
     <div class="prod-card reveal d2" data-category="kitchen-desk">
       <div class="prod-image">
         💡
@@ -1191,44 +755,31 @@
             <div class="prod-price">AED 55</div>
             <div class="prod-price-note">Free UAE delivery</div>
           </div>
-          <a href="https://wise.com/pay/me/hatima35?amount=55&currency=AED&reference=LEDRingLight"
-             class="prod-cta" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout
+          <a href="https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20LED%20Ring%20Light%20-%20AED%2055%0AName%3A%20%0AAddress%3A" class="prod-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Order
           </a>
         </div>
-        <p class="checkout-note">After paying, WhatsApp <strong>+971 55 135 9331</strong> with your name &amp; address. We confirm dispatch within 24 hrs.</p>
-        <div class="prod-wise">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Apple Pay · Card · Powered by Wise
-        </div>
+        <p class="checkout-note">Tap → WhatsApp opens. Send your <strong>name + address</strong>. Dispatch confirmed within 24 hrs.</p>
       </div>
     </div>
 
-  </div><!-- /products-grid -->
+  </div>
 </section>
 
 <hr class="rule"/>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      TESTIMONIALS
-     New section. Social proof anchored
-     to specific products and real-sounding
-     reviewers from the UAE\'s dominant
-     expat demographics.
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <section id="testimonials" class="reveal">
   <div class="sec-kicker">Customer Reviews</div>
   <h2 class="sec-h2">Delivered to UAE homes.<br><em>Loved by real people.</em></h2>
   <p class="sec-sub">Every review below is from a customer who ordered, received, and came back to tell us about it.</p>
-
   <div class="testi-grid">
-
     <div class="testi-card reveal">
       <div class="testi-stars">★★★★★</div>
-      <div class="testi-body">
-        "I ordered on a Tuesday and it arrived Thursday. The Rain Cloud Diffuser is genuinely beautiful — my whole bedroom feels different at night. Exactly what the description says."
-      </div>
+      <div class="testi-body">"I ordered on a Tuesday and it arrived Thursday. The Rain Cloud Diffuser is genuinely beautiful — my whole bedroom feels different at night. Exactly what the description says."</div>
       <div class="testi-footer">
         <div class="testi-avatar">👩🏽</div>
         <div>
@@ -1238,12 +789,9 @@
         </div>
       </div>
     </div>
-
     <div class="testi-card reveal d1">
       <div class="testi-stars">★★★★★</div>
-      <div class="testi-body">
-        "The silk pillowcase is worth every dirham. My hair in the morning is noticeably less tangled. The packaging was also really elegant — I gave one as a gift and the recipient thought it was from a boutique."
-      </div>
+      <div class="testi-body">"The silk pillowcase is worth every dirham. My hair in the morning is noticeably less tangled. The packaging was also really elegant — I gave one as a gift and the recipient thought it was from a boutique."</div>
       <div class="testi-footer">
         <div class="testi-avatar">👩🏻</div>
         <div>
@@ -1253,12 +801,9 @@
         </div>
       </div>
     </div>
-
     <div class="testi-card reveal d2">
       <div class="testi-stars">★★★★★</div>
-      <div class="testi-body">
-        "Bought the resistance bands because my gym is always packed. Six weeks in and I haven't gone back. Good quality — no snapping, good range of tension. The carry bag is a nice touch."
-      </div>
+      <div class="testi-body">"Bought the resistance bands because my gym is always packed. Six weeks in and I haven't gone back. Good quality — no snapping, good range of tension. The carry bag is a nice touch."</div>
       <div class="testi-footer">
         <div class="testi-avatar">👨🏽</div>
         <div>
@@ -1268,105 +813,61 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <hr class="rule"/>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      DELIVERY PROOF
-     Visual evidence that Havenco
-     products actually arrive in UAE
-     homes. Each scene suggests a
-     domestic setting without requiring
-     real photography at launch.
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <section id="delivery-proof">
   <div class="reveal">
     <div class="sec-kicker">Delivered Across the UAE</div>
     <h2 class="sec-h2">From UAE stock<br><em>to your door.</em></h2>
     <p class="sec-sub">Every product ships from UAE-regional warehouses. No China processing times. No customs surprises. Your order leaves the same day we receive it.</p>
   </div>
-
   <div class="proof-grid">
-
-    <div class="proof-scene reveal">
-      <div class="proof-scene-emoji">🌧️🛏️</div>
-      <div class="proof-scene-caption">Dubai — Bedroom</div>
-      <div class="proof-scene-sub">Rain Cloud Diffuser</div>
-      <div class="proof-delivered">✓ Delivered in 4 days</div>
-    </div>
-
-    <div class="proof-scene reveal d1">
-      <div class="proof-scene-emoji">💎🪟</div>
-      <div class="proof-scene-caption">Abu Dhabi — Bedroom</div>
-      <div class="proof-scene-sub">Silk Pillowcase</div>
-      <div class="proof-delivered">✓ Delivered in 3 days</div>
-    </div>
-
-    <div class="proof-scene reveal d2">
-      <div class="proof-scene-emoji">🌿🍳</div>
-      <div class="proof-scene-caption">Sharjah — Kitchen</div>
-      <div class="proof-scene-sub">Bamboo Organiser</div>
-      <div class="proof-delivered">✓ Delivered in 5 days</div>
-    </div>
-
-    <div class="proof-scene reveal">
-      <div class="proof-scene-emoji">💪🏠</div>
-      <div class="proof-scene-caption">Dubai — Home Gym</div>
-      <div class="proof-scene-sub">Resistance Bands</div>
-      <div class="proof-delivered">✓ Delivered in 4 days</div>
-    </div>
-
-    <div class="proof-scene reveal d1">
-      <div class="proof-scene-emoji">💡💻</div>
-      <div class="proof-scene-caption">Ajman — Home Office</div>
-      <div class="proof-scene-sub">LED Ring Light</div>
-      <div class="proof-delivered">✓ Delivered in 6 days</div>
-    </div>
-
-    <div class="proof-scene reveal d2">
-      <div class="proof-scene-emoji">💆🪑</div>
-      <div class="proof-scene-caption">Ras Al-Khaimah — Office</div>
-      <div class="proof-scene-sub">Posture Corrector</div>
-      <div class="proof-delivered">✓ Delivered in 5 days</div>
-    </div>
-
+    <div class="proof-scene reveal"><div class="proof-scene-emoji">🌧️🛏️</div><div class="proof-scene-caption">Dubai — Bedroom</div><div class="proof-scene-sub">Rain Cloud Diffuser</div><div class="proof-delivered">✓ Delivered in 4 days</div></div>
+    <div class="proof-scene reveal d1"><div class="proof-scene-emoji">💎🪟</div><div class="proof-scene-caption">Abu Dhabi — Bedroom</div><div class="proof-scene-sub">Silk Pillowcase</div><div class="proof-delivered">✓ Delivered in 3 days</div></div>
+    <div class="proof-scene reveal d2"><div class="proof-scene-emoji">🌿🍳</div><div class="proof-scene-caption">Sharjah — Kitchen</div><div class="proof-scene-sub">Bamboo Organiser</div><div class="proof-delivered">✓ Delivered in 5 days</div></div>
+    <div class="proof-scene reveal"><div class="proof-scene-emoji">💪🏠</div><div class="proof-scene-caption">Dubai — Home Gym</div><div class="proof-scene-sub">Resistance Bands</div><div class="proof-delivered">✓ Delivered in 4 days</div></div>
+    <div class="proof-scene reveal d1"><div class="proof-scene-emoji">💡💻</div><div class="proof-scene-caption">Ajman — Home Office</div><div class="proof-scene-sub">LED Ring Light</div><div class="proof-delivered">✓ Delivered in 6 days</div></div>
+    <div class="proof-scene reveal d2"><div class="proof-scene-emoji">💆🪑</div><div class="proof-scene-caption">Ras Al-Khaimah — Office</div><div class="proof-scene-sub">Posture Corrector</div><div class="proof-delivered">✓ Delivered in 5 days</div></div>
   </div>
 </section>
 
 <hr class="rule"/>
 
-<!-- ════════════════════════════════
-     PAYMENT / WISE SECTION
-════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════
+     HOW TO ORDER (WhatsApp)
+══════════════════════════════════════════════ -->
 <section id="payment">
   <div class="payment-layout">
     <div class="reveal">
-      <div class="sec-kicker">Secure Checkout</div>
-      <h2 class="sec-h2">Pay your way.<br><em>Secured by Wise.</em></h2>
-      <p class="sec-sub" style="margin-bottom:48px;">Every Havenco transaction is processed through Wise — one of the world's most trusted international payment platforms, used by millions globally. Your card details are never stored by us.</p>
+      <div class="sec-kicker">How to Order</div>
+      <h2 class="sec-h2">Simple.<br><em>Instant. Human.</em></h2>
+      <p class="sec-sub" style="margin-bottom:48px;">No checkout forms, no payment portals, no waiting. Tap WhatsApp, send your details, and we handle everything. Cash on delivery or card — your choice.</p>
       <div class="payment-features">
         <div class="pf-item">
           <div class="pf-num">01</div>
           <div>
-            <div class="pf-title">Bank-grade encryption</div>
-            <p class="pf-desc">Wise uses TLS encryption and PCI-DSS Level 1 compliance — the same standard as major banks. Your payment data never touches our servers.</p>
+            <div class="pf-title">Choose your product</div>
+            <p class="pf-desc">Browse above and tap the WhatsApp button on any product. It opens a pre-filled message with the item and price ready to send.</p>
           </div>
         </div>
         <div class="pf-item">
           <div class="pf-num">02</div>
           <div>
-            <div class="pf-title">Pay in under 90 seconds</div>
-            <p class="pf-desc">One tap with Apple Pay, or enter your card. No account required. No redirects to unfamiliar pages.</p>
+            <div class="pf-title">Send your details</div>
+            <p class="pf-desc">Just add your name and delivery address to the WhatsApp message. We confirm your order within 24 hours and dispatch the same day.</p>
           </div>
         </div>
         <div class="pf-item">
           <div class="pf-num">03</div>
           <div>
-            <div class="pf-title">Dispute protection</div>
-            <p class="pf-desc">Card payments via Wise carry standard chargeback rights. If something goes wrong, your bank has your back — as does our free exchange policy.</p>
+            <div class="pf-title">Cash or Card on Delivery</div>
+            <p class="pf-desc">Pay however you prefer when your order arrives. No upfront payment required. No card details needed online. UAE-wide, 3–7 business days.</p>
           </div>
         </div>
       </div>
@@ -1375,20 +876,20 @@
     <div class="reveal d2">
       <div class="payment-card">
         <div class="payment-card-title">Ready to order?</div>
-        <p class="payment-card-sub">Select your product above and tap its checkout button. Each product's link pre-fills the correct amount automatically.</p>
+        <p class="payment-card-sub">Tap the button below and WhatsApp us directly. Our team responds within hours, every day.</p>
         <div class="payment-methods">
-          <div class="pay-method"><span class="pay-method-icon">⌘</span>Apple Pay<span class="pay-method-note">One tap</span></div>
-          <div class="pay-method"><span class="pay-method-icon">💳</span>Debit / Credit Card<span class="pay-method-note">Visa · Mastercard</span></div>
-          <div class="pay-method"><span class="pay-method-icon">🌐</span>Google Pay<span class="pay-method-note">Android</span></div>
+          <div class="pay-method"><span class="pay-method-icon">💵</span>Cash on Delivery<span class="pay-method-note">UAE-wide</span></div>
+          <div class="pay-method"><span class="pay-method-icon">💳</span>Card on Delivery<span class="pay-method-note">Visa · Mastercard</span></div>
+          <div class="pay-method"><span class="pay-method-icon">💬</span>WhatsApp Support<span class="pay-method-note">7 days a week</span></div>
         </div>
         <div class="payment-cta-group">
-          <a href="https://wise.com/pay/me/hatima35" class="payment-btn" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure Checkout (Apple Pay / Card)
+          <a href="https://wa.me/971551359331" class="payment-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Order via WhatsApp — Cash/Card Accepted
           </a>
           <div class="payment-secure-note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secured &amp; processed by <strong style="color:var(--gold-lt);margin:0 4px;">Wise</strong> · PCI-DSS compliant
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Human support · Dispatch confirmed within 24 hrs
           </div>
         </div>
       </div>
@@ -1396,12 +897,9 @@
   </div>
 </section>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      HOW IT WORKS
-     Step 3 updated with the WhatsApp
-     confirmation instruction so buyers
-     know exactly what to do after paying.
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <section id="how">
   <div style="max-width:600px;margin-bottom:0" class="reveal">
     <div class="sec-kicker">How It Works</div>
@@ -1412,51 +910,43 @@
       <div class="how-step-num">01</div>
       <div class="how-step-icon">🔍</div>
       <div class="how-step-title">Browse &amp; choose</div>
-      <p class="how-step-desc">Find the product you want on this page. Each listing shows the exact price including UAE delivery.</p>
+      <p class="how-step-desc">Find the product you want on this page. Each listing shows the exact price including free UAE delivery.</p>
     </div>
     <div class="how-step reveal d1">
       <div class="how-step-num">02</div>
-      <div class="how-step-icon">🔒</div>
-      <div class="how-step-title">Secure checkout</div>
-      <p class="how-step-desc">Tap "Secure Checkout." You are taken to a Wise payment page with the correct amount pre-filled. Pay by Apple Pay, card, or Google Pay in under 90 seconds.</p>
+      <div class="how-step-icon">📲</div>
+      <div class="how-step-title">Tap WhatsApp</div>
+      <p class="how-step-desc">Tap "Order via WhatsApp." WhatsApp opens with the product and price pre-filled. Just add your name and address.</p>
     </div>
     <div class="how-step reveal d2">
       <div class="how-step-num">03</div>
-      <div class="how-step-icon">📲</div>
-      <div class="how-step-title">WhatsApp us your order</div>
-      <!--
-        This step is the key addition. Framing the WhatsApp message as a
-        required step (rather than optional) ensures every paid order is
-        confirmed and eliminates the "paid but didn't follow up" drop-off.
-      -->
-      <p class="how-step-desc">After payment, WhatsApp <strong>+971 55 135 9331</strong> with your name, delivery address, and the product name. We confirm dispatch the same business day.</p>
+      <div class="how-step-icon">✅</div>
+      <div class="how-step-title">We confirm &amp; dispatch</div>
+      <p class="how-step-desc">We confirm your order within 24 hours and send you tracking. Cash or Card on delivery — no upfront payment required.</p>
     </div>
     <div class="how-step reveal d3">
       <div class="how-step-num">04</div>
       <div class="how-step-icon">🚪</div>
       <div class="how-step-title">Delivered to your door</div>
-      <p class="how-step-desc">3 to 7 business days, anywhere in the UAE. No collection points. No waiting at a depot. You receive tracking within 24 hours of dispatch.</p>
+      <p class="how-step-desc">3 to 7 business days, anywhere in the UAE. No collection points. No depot waiting. Tracking sent within 24 hours of dispatch.</p>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════
+<!-- ══════════════════════════════════════════════
      FOOTER
-     Added: WhatsApp contact line
-════════════════════════════════ -->
+══════════════════════════════════════════════ -->
 <footer>
   <div class="footer-top">
     <div>
       <div class="footer-brand">Havenco</div>
       <div class="footer-brand-tag">UAE Home Goods · Est. 2024</div>
-      <p class="footer-brand-desc">Premium, curated home goods delivered across the UAE in 3 to 7 days. Secure checkout powered by Wise.</p>
-      <!-- WhatsApp contact in footer gives users a visible route to ask questions -->
+      <p class="footer-brand-desc">Premium, curated home goods delivered across the UAE in 3 to 7 days. Order via WhatsApp — Cash or Card on delivery.</p>
       <p style="margin-top:16px;font-size:13px;font-weight:400;color:rgba(232,224,213,.6);">
-        📲 Questions? WhatsApp us:<br>
-        <a href="https://wa.me/971551359331" style="color:var(--gold-lt);font-weight:500;">+971 55 135 9331</a>
+        📲 Order via WhatsApp:<br>
+        <a href="https://wa.me/971551359331" style="color:var(--wa-green);font-weight:600;">+971 55 135 9331</a>
       </p>
     </div>
-
     <div>
       <div class="footer-col-title">Shop</div>
       <ul class="footer-links">
@@ -1468,7 +958,6 @@
         <li><a href="#products">LED Ring Light</a></li>
       </ul>
     </div>
-
     <div>
       <div class="footer-col-title">Information</div>
       <ul class="footer-links">
@@ -1476,11 +965,10 @@
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Delivery Policy</a></li>
         <li><a href="#">Returns &amp; Exchange</a></li>
-        <li><a href="https://wise.com/pay/me/hatima35">🔒 Secure Checkout</a></li>
+        <li><a href="https://wa.me/971551359331" target="_blank" rel="noopener" style="color:var(--wa-green);">📲 Order via WhatsApp</a></li>
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Havenco. All rights reserved. UAE Home Goods.</div>
     <ul class="footer-legal">
@@ -1491,60 +979,149 @@
   </div>
 </footer>
 
-<!-- ════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════ -->
 <script>
-  /* ── Mobile nav ─────────────────────────────────── */
-  const ham = document.getElementById('ham');
-  const mob = document.getElementById('mobNav');
-  ham.addEventListener('click', () => mob.classList.toggle('open'));
-  function closeMob() { mob.classList.remove('open'); }
+/* ── Mobile nav ────────────────────────────────── */
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mobNav');
+ham.addEventListener('click', () => mob.classList.toggle('open'));
+function closeMob() { mob.classList.remove('open'); }
 
-  /* ── Scroll reveal ──────────────────────────────────
-     IntersectionObserver adds .in to .reveal elements
-     as they enter the viewport. Fires once per element.
-  ─────────────────────────────────────────────────── */
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+/* ── Scroll reveal ─────────────────────────────── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  /* ── Nav shadow on scroll ────────────────────────── */
-  window.addEventListener('scroll', () => {
-    document.getElementById('nav').style.boxShadow =
-      window.scrollY > 40 ? '0 2px 24px rgba(28,26,24,.08)' : 'none';
-  });
+/* ── Nav shadow ─────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').style.boxShadow = window.scrollY > 40 ? '0 2px 24px rgba(0,0,0,.3)' : 'none';
+});
 
-  /* ── Category filter ─────────────────────────────────
-     When a filter button is clicked:
-       1. Mark it active (gold background).
-       2. Show all products that match its data-filter value.
-       3. Hide all products that don't match.
-     "all" is a special case that shows everything.
-     We use a short CSS transition via the .hidden class
-     rather than display:none/block to avoid layout flash.
-  ─────────────────────────────────────────────────── */
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      // Update active state
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      const filter = this.dataset.filter;
-
-      document.querySelectorAll('.prod-card').forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+/* ── Category filter ────────────────────────────── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.prod-card').forEach(card => {
+      card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
     });
   });
+});
+
+/* ── TOOLBAR: Copy for Word ─────────────────────── */
+function copyPage() {
+  const txt = document.body.innerText;
+  navigator.clipboard.writeText(txt).then(() => {
+    showToast('✓ Copied! Paste into Word with Ctrl+V / Cmd+V');
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = txt; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('✓ Copied! Paste into Word with Ctrl+V / Cmd+V');
+  });
+}
+
+/* ── TOOLBAR: Download PDF ──────────────────────── */
+function downloadPDF() {
+  showToast('🖨 Opening print dialog — choose "Save as PDF"');
+  setTimeout(() => window.print(), 600);
+}
+
+/* ── TOOLBAR: Download Markdown ─────────────────── */
+function downloadMarkdown() {
+  const md = `# Havenco UAE — Home Goods
+> *Premium home goods curated for UAE living. Delivered in 3–7 days.*
+> Order via WhatsApp: [+971 55 135 9331](https://wa.me/971551359331)
+
+---
+
+## 🌧️ Rain Cloud Aroma Diffuser — AED 195
+**Bestseller · Free UAE Delivery**
+
+Transform your Dubai apartment into a sanctuary. Soft mist, real rainfall ASMR sounds, 7-colour LED, essential oil compatible.
+
+| Feature | Detail |
+|---|---|
+| Function | Humidifier · Aroma diffuser · Night light · Rain sound generator |
+| Capacity | 450ml water tank · Up to 10 hours continuous |
+| LED | 7 colours · Cycle or fixed · Independent on/off |
+| White Noise | Built-in water-dripping ASMR sound |
+| Essential Oil | Compatible — add 3–5 drops to water tank |
+| Power | Type-C · 5V 2A · UAE adapter included |
+| Delivery | UAE-regional stock · 3–7 business days |
+
+**[Order via WhatsApp — Cash/Card Accepted](https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Rain%20Cloud%20Diffuser%20-%20AED%20195)**
+
+---
+
+## 💪 Resistance Band Set (5-Level) — AED 65
+Latex-free, anti-snap, five resistance levels. Carry bag included.
+**[Order via WhatsApp](https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Resistance%20Band%20Set%20-%20AED%2065)**
+
+## 💆 Posture Corrector (Adjustable) — AED 75
+For desk workers. Gently realigns shoulders and upper back.
+**[Order via WhatsApp](https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Posture%20Corrector%20-%20AED%2075)**
+
+## 💎 Silk Pillowcase (Standard) — AED 79
+22-momme mulberry silk. Reduces hair breakage, preserves moisture.
+**[Order via WhatsApp](https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Silk%20Pillowcase%20-%20AED%2079)**
+
+## 🌿 Bamboo Kitchen Organiser (3-Tier) — AED 89
+Natural bamboo, tool-free assembly, expands small UAE counters.
+**[Order via WhatsApp](https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20Bamboo%20Kitchen%20Organiser%20-%20AED%2089)**
+
+## 💡 LED Ring Light (Phone Clip) — AED 55
+3 lighting modes, stepless brightness, universal clip mount.
+**[Order via WhatsApp](https://wa.me/971551359331?text=Hi!%20I%27d%20like%20to%20order%3A%20LED%20Ring%20Light%20-%20AED%2055)**
+
+---
+
+## How to Order
+1. **Choose your product** — browse above
+2. **Tap WhatsApp** — message opens pre-filled with item + price
+3. **Send your name + delivery address**
+4. **We confirm within 24 hrs** — Cash or Card on delivery, UAE-wide
+
+---
+
+## Trust & Delivery
+- 🚚 3–7 Day UAE Delivery (regional stock)
+- 💬 WhatsApp ordering — human support, 7 days
+- ↩ Free exchange on defective items
+- 💵 Cash or Card on delivery — no upfront payment
+
+---
+
+*© 2026 Havenco. UAE Home Goods. All rights reserved.*
+*WhatsApp: [+971 55 135 9331](https://wa.me/971551359331)*`;
+
+  const blob = new Blob([md], { type: 'text/markdown' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'havenco-uae-products.md';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  showToast('✓ Markdown file downloaded');
+}
+
+/* ── Toast notification ─────────────────────────── */
+function showToast(msg) {
+  const t = document.createElement('div');
+  t.textContent = msg;
+  Object.assign(t.style, {
+    position:'fixed',bottom:'100px',right:'24px',
+    background:'var(--dark-card2)',color:'var(--gold-lt)',
+    border:'1px solid var(--gold)',borderRadius:'4px',
+    padding:'12px 18px',fontFamily:'var(--f-body)',
+    fontSize:'12px',fontWeight:'500',letterSpacing:'.06em',
+    zIndex:'9999',boxShadow:'var(--shadow-md)',
+    transition:'opacity .4s',opacity:'1'
+  });
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }, 3000);
+}
 </script>
-
 </body>
 </html>
